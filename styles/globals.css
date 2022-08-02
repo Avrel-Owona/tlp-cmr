@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.carte-text::after {
+    content: " ";
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: #ea580b;
+    width: 100px;
+    display: block;
+    margin-left: 0;
+    margin-top: 2rem;
+}
+.carte-text-after::after{
+    margin-left: auto;
+    margin-right: auto;
+}
+.carte{
+    transition: 0.3s all;
+}
+.carte:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgb(189 189 189 / 19%), 0 6px 6px rgb(189 189 189 / 23%);
+}
