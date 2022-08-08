@@ -23,3 +23,17 @@
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgb(189 189 189 / 19%), 0 6px 6px rgb(189 189 189 / 23%);
 }
+.gallerie {
+    column-width: 33%;
+    padding: 0 12px;
+}
+.gallerie .pics {
+    transition: all 350ms ease;
+}
+.gallerie .pics:hover {
+    filter: opacity(.8);
+}
+.modal {
+    transition: opacity .4s ease, visibility .4s ease, transform .5s ease-in-out;
+    z-index: 999;
+}

@@ -15,14 +15,19 @@ export const NavItems = [
         path : '/tlp_tv'
     },
     {
+        id : 3,
+        title : 'TLP CMR',
+        path : '/tlp_cmr'
+    },
+    {
         id : 4,
         title : 'Régions',
         path : '/regions'
     },
     {
         id : 5,
-        title : 'Communiqués',
-        path : '/communiques'
+        title : 'Offres',
+        path : '/offres'
     },
     {
         id : 6,
