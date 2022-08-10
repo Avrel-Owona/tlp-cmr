@@ -1,19 +1,12 @@
 import Link from "next/link";
 import RegissorCard from "../app/components/RegissorCard";
+import { Slider } from "../app/components/Slider";
 
 
 export default function Home() {
   return (
       <>
-          <div className='h-screen w-screen relative'>
-              <div className="h-full w-full justify-center lg:pl-52 items-center lg:items-start absolute top-0 flex flex-col z-40">
-                  <h3 className='text-white font-bold text-6xl uppercase text-center lg:text-left'>Tournons la page <br/> Cameroun</h3>
-                  <p className='pt-10 w-10/12 lg:w-4/12 text-white text-xl font-light text-center lg:text-left'>Tournons La Page est un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne.</p>
-              </div>
-              <div className='h-full w-full bg-black opacity-50 absolute top-0 border-red-500 top-0'></div>
-              <img src="/groupe-tlp.png" className='w-full h-full object-cover z-0' alt=""/>
-              {/*<img src="/resis.jpg" className='w-full h-full object-cover z-0' alt=""/>*/}
-          </div>
+          <Slider/>
           <div className='flex flex-wrap justify-center sm:px-20 px-7 lg:pt-32 pt-20 mb-32'>
               <div className='w-full text-center lg:text-left sm:w-96 sm:mr-20 flex flex-col justify-center'>
                   <h3 className='text-3xl carte-text'>

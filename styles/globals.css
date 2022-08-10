@@ -44,6 +44,8 @@
     height: 100vh;
     position: relative;
     overflow: hidden;
+    margin-top: -116px;
+    z-index: 0;
 }
 .slide { 
     position: absolute;
@@ -63,14 +65,17 @@
     transform: translateX(0);
 }
 .content {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 41%);
 }
 .current .content {
     opacity: 1;
 }
 .slide-button {
-    top: 50%;
+    top: 55%;
     z-index: 999;
+}
+svg{
+    stroke: white;
 }
 @media screen and (min-width : 600px) {
     .slide .img {

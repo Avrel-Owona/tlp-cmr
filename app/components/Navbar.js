@@ -29,6 +29,8 @@ export const Navbar = () => {
 
     return (
         <>
+            
+            <nav className="w-full z-40 sticky top-0 z-50 bg-white relative shadow-md">
             <div className='h-9 shadow-black bg-orange-600 flex items-center px-7 lg:px-20 justify-between'>
                 <div className='flex items-center'>
                     <a href="tel:" className='flex items-center text-gray-200 text-sm cursor-pointer'><FaPhone className='mr-2 text-lg'/> Number</a>
@@ -40,7 +42,7 @@ export const Navbar = () => {
                     <Link href={'#'}><FaYoutube className={'ml-5 hover:text-gray-600 cursor-pointer'}/></Link>
                 </div>
             </div>
-            <nav className="w-full z-40 sticky top-0 z-50 bg-white relative shadow-md">
+                <>
                 <div className={`flex items-center justify-center h-20 w-full bg-white`}>
                     {/*=========== NAVBAR PC ================*/}
                     <div className='flex items-center sm:mx-20 mx-7 justify-between w-full nav'>
@@ -167,6 +169,7 @@ export const Navbar = () => {
                         </div>
                     </>
                 ) : ''}
+                </>
             </nav>
         </>
     );
