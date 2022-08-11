@@ -6,7 +6,7 @@ import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
   return (
-      <HomeLayout>
+      <>
           <Script strategy={"lazyOnload"} src={"https://www.googletagmanager.com/gtag/js?id=G-E4K29JR05G"}/>
           <Script strategy={"lazyOnload"}>
               {
@@ -17,8 +17,10 @@ function MyApp({ Component, pageProps }) {
                       gtag('config', 'G-E4K29JR05G');`
               }
           </Script>
-        <Component {...pageProps} />
-      </HomeLayout>
+          <HomeLayout>
+              <Component {...pageProps} />
+          </HomeLayout>
+      </>
   )
 }
 
