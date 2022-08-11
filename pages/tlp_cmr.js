@@ -24,7 +24,7 @@ const TlpCmr = () => {
                 <img className='h-auto max-h-full w-auto max-w-full py-10' src={imgSrc} alt=""/>
             </div>
             <div className="bg-gray-100 w-full py-36 flex flex-col items-center sm:px-20 px-7"><h1
-                className="font-bold text-4xl text-center text-gray-800 carte-text carte-text-after">Mouvement Tournons
+                className="font-bold text-3xl sm:text-4xl text-center text-gray-800 carte-text carte-text-after">Mouvement Tournons
                 La Page <br/> Cameroun</h1><p className="mt-20 text-center w-full sm:w-9/12 text-xl text-gray-500 font-light">Tournons
                 La Page est un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique
                 en Afrique subsaharienne. Il s’agit d’une alliance non-partisane et pacifique de 200 organisations de
