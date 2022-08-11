@@ -8,7 +8,7 @@ const TlpCmr = () => {
     const [modal, setModal] = useState(false)
     const [imgSrc, setImgSrc] = useState('')
 
-    const getImg = (img) => {
+    const getImg = (img) => { 
         setModal(true)
         setImgSrc(img)
         console.log(modal)
@@ -24,7 +24,7 @@ const TlpCmr = () => {
             </div>
             <div className="bg-gray-100 w-full py-36 flex flex-col items-center sm:px-20 px-7"><h1
                 className="font-bold text-4xl text-center text-gray-800 carte-text carte-text-after">Mouvement Tournons
-                La Page</h1><p className="mt-20 text-center w-full sm:w-9/12 text-xl text-gray-500 font-light">Tournons
+                La Page <br/> Cameroun</h1><p className="mt-20 text-center w-full sm:w-9/12 text-xl text-gray-500 font-light">Tournons
                 La Page est un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique
                 en Afrique subsaharienne. Il s’agit d’une alliance non-partisane et pacifique de 200 organisations de
                 défense des droits humains, de mouvements de jeunes, de syndicats, d’associations non confessionnelles,

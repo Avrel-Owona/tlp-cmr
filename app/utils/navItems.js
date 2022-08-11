@@ -22,7 +22,7 @@ export const NavItems = [
     {
         id : 4,
         title : 'Régions',
-        path : '/regions'
+        path : ''
     },
     {
         id : 5,

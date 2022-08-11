@@ -6,7 +6,7 @@ const Dropdowns = () => {
     const [dropdown, setDropdown] = useState(true)
 
     return (
-        <div className='w-64 absolute top-48 z-40 right-10'>
+        <div className='w-64 absolute top-48 z-40 right-10 shadow-md'>
             <ul className={dropdown ? 'bg-white flex flex-col' : 'hidden'}  onClick={()=>setDropdown(!dropdown)}>
                 {DropdownsItems.map((item)=> {
                     return (

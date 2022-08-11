@@ -30,7 +30,7 @@ export const Navbar = () => {
     return (
         <>
             
-            <nav className="w-full z-40 sticky top-0 z-50 bg-white relative shadow-md">
+            <nav className="w-full sticky top-0 z-50 bg-white shadow-md">
             <div className='h-9 shadow-black bg-orange-600 flex items-center px-7 lg:px-20 justify-between'>
                 <div className='flex items-center'>
                     <a href="tel:" className='flex items-center text-gray-200 text-sm cursor-pointer'><FaPhone className='mr-2 text-lg'/> Number</a>
@@ -76,25 +76,9 @@ export const Navbar = () => {
                                     )
                                 })}
                             </ul>
-                            <ul className={`${isDrop ? 'block mt-3 absolute right-0 shadow-lg border border-gray-100 border-4 bg-white w-80' : 'hidden'}`} id='drop'>
-                                <div id='flech'></div>
-                                <li className="flex justify-center border-b w-full text-sm pt-4 pb-6 pl-4 text-gray-500">
-                                    <div className="flex justify-center w-full">
-                                        <div className='relative w-full flex justify-center flex-col'>
-                                            <Link href={'/profile'}>
-                                                <span className="font-normal underline text-sm w-full mt-2 cursor-pointer">Manage my profile</span>
-                                            </Link>
-                                        </div>
-                                    </div>
-
-                                </li>
-                                <ActiveLink activeClassName=" font-semibold" href={'/profile'}>
-                                    <li className="flex items-center h-10 text-sm capitalize px-5 text-gray-500 hover:bg-gray-50 hover:text-black cursor-pointer">View profile</li>
-                                </ActiveLink>
-                            </ul>
                         </div>
                         {/*=========== NAVBAR PHONE ================*/}
-                        <div className='flex h-10 w-10 justify-end flex lg:hidden'>
+                        <div className='flex h-10 w-10 justify-end lg:hidden'>
                             <button
                                 name={'logout'}
                                 className='text-black flex items-center justify-center focus:outline-none focus:ring-offset-2 focus:ring-white'
@@ -124,10 +108,14 @@ export const Navbar = () => {
                                 <ActiveLink activeClassName="font-semibold text-orange-600" href={'/tlp_tv'}>
                                     <li key='' className='cursor-pointer font-sans py-3 text-sm'>TLP TV</li>
                                 </ActiveLink>
+                                <ActiveLink activeClassName="font-semibold text-orange-600" href={'/tlp_cmr'}>
+                                    <li key='' className='cursor-pointer font-sans py-3 text-sm'>TLP CMR</li>
+                                </ActiveLink>
                                     <li key='' className='cursor-pointer font-sans py-3 text-sm' onClick={()=>setIsDropRegionsItems(!isDropRegionsItems)}>Régions</li>
                                 {isDropRegionsItems ? (
                                     <div className=''>
-                                        <ActiveLink activeClassName="font-semibold text-orange-600" href={'/regions/adamaoua'}>
+
+                                        <ActiveLink activeClassName="font-semibold text-orange-600" href={'/regions/admaoua'}>
                                             <li key='' className='cursor-pointer font-sans py-3 text-sm hover:bg-gray-100 px-5'>Adamaoua</li>
                                         </ActiveLink>
                                         <ActiveLink activeClassName="font-semibold text-orange-600" href={'/regions/centre'}>
@@ -145,7 +133,7 @@ export const Navbar = () => {
                                         <ActiveLink activeClassName="font-semibold text-orange-600" href={'/regions/nord'}>
                                             <li key='' className='cursor-pointer font-sans py-3 text-sm hover:bg-gray-100 px-5'>Nord</li>
                                         </ActiveLink>
-                                        <ActiveLink activeClassName="font-semibold text-orange-600" href={'/regions/nord-ouest'}>
+                                        <ActiveLink activeClassName="font-semibold text-orange-600" href={'/nord-ouest'}>
                                             <li key='' className='cursor-pointer font-sans py-3 text-sm hover:bg-gray-100 px-5'>Nord-Ouest</li>
                                         </ActiveLink>
                                         <ActiveLink activeClassName="font-semibold text-orange-600" href={'/regions/ouest'}>
@@ -159,10 +147,10 @@ export const Navbar = () => {
                                         </ActiveLink>
                                     </div>
                                 ) : null}
-                                <ActiveLink activeClassName="font-semibold text-orange-600" href={'/login'}>
-                                    <li key='' className='cursor-pointer font-sans py-3 text-sm'>Communiqués</li>
+                                <ActiveLink activeClassName="font-semibold text-orange-600" href={'/offres'}>
+                                    <li key='' className='cursor-pointer font-sans py-3 text-sm'>Offres</li>
                                 </ActiveLink>
-                                <ActiveLink activeClassName="font-semibold text-orange-600" href={'/login'}>
+                                <ActiveLink activeClassName="font-semibold text-orange-600" href={'/contact'}>
                                     <li key='' className='cursor-pointer font-sans py-3 text-sm'>Contact</li>
                                 </ActiveLink>
                             </ul>
