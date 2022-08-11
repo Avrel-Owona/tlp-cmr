@@ -47,7 +47,7 @@ export const Slider = () => {
                             <>
                                 <img src={slide.imgSrc} className='w-full object-cover h-full'/>
                                 <div className="content absolute flex flex-col top-0 h-full w-full justify-center lg:pl-52 items-center lg:items-start z-40 sm:px-20 px-7">
-                                    <h3 class="text-white w-full lg:w-3/6 font-bold text-6xl uppercase text-center lg:text-left">{slide.title}</h3>
+                                    <h3 class="text-white w-full lg:w-3/6 font-bold text-4xl sm:text-6xl uppercase text-center lg:text-left">{slide.title}</h3>
                                     <p class="pt-10 w-10/12 lg:w-4/12 text-white text-xl font-light text-center lg:text-left">{slide.subtitle}</p>
                                 </div>
                             </>
