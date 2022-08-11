@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import RegissorCard from "../app/components/RegissorCard";
 import {ImagesItems} from "../app/utils/ImagesItems";
 import {AiOutlineClose} from "react-icons/ai";
+import Link from "next/link";
 
 const TlpCmr = () => {
 
@@ -30,7 +31,13 @@ const TlpCmr = () => {
                 défense des droits humains, de mouvements de jeunes, de syndicats, d’associations non confessionnelles,
                 d’intellectuels et d’artistes regroupés en dix coalitions nationales : Burundi, Cameroun, Congo,
                 Côte-d’Ivoire, Gabon, Guinée, Niger, République Démocratique du Congo, Tchad et Togo ainsi qu’une
-                coalition européenne. La coordination internationale de TLP est basée à Paris.</p><img
+                coalition européenne. La coordination internationale de TLP est basée à Paris.</p>
+
+                    <Link href={'/'}>
+                        <button className='px-10 py-3 bg-orange-600 text-white mt-20 mb-32'>Devenir membre</button>
+                    </Link>
+
+                <img
                 src="/afrique.png" className="w-full mt-20 sm:w-96 h-full object-cover z-0" alt=""/>
             </div>
             <div className='sm:px-20 pt-7 pb-40'>
@@ -62,9 +69,6 @@ const TlpCmr = () => {
                         )
                     })}
                 </div>
-            </div>
-            <div className='sm:px-20 pt-7 pb-40'>
-                <h3 className='carte-text carte-text-after text-center text-4xl font-bold py-36'>Comment devenir membre ?</h3>
             </div>
         </>
     );
