@@ -70,7 +70,7 @@ export const Navbar = () => {
                                         )
                                     }
                                     return (
-                                        <ActiveLink activeClassName="font-semibold border-b-2 border-orange-600" href={item.path}>
+                                        <ActiveLink activeClassName="font-semibold l border-b-2 border-orange-600" href={item.path}>
                                             <li key={item.id} className='cursor-pointer font-sans mx-5 py-2 text-sm'>{item.title}</li>
                                         </ActiveLink>
                                     )
