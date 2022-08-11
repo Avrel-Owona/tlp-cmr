@@ -33,8 +33,8 @@ export const Navbar = () => {
             <nav className="w-full sticky top-0 z-50 bg-white shadow-md">
             <div className='h-9 shadow-black bg-orange-600 flex items-center px-7 lg:px-20 justify-between'>
                 <div className='flex items-center'>
-                    <a href="tel:" className='flex items-center text-gray-200 text-sm cursor-pointer'><FaPhone className='mr-2 text-lg'/> Number</a>
-                    <a href="tel:" className='flex items-center text-gray-200 text-sm cursor-pointer ml-4'><MdLocationOn className='mr-2 text-lg'/> Location</a>
+                    <a href="tel:" className='flex items-center text-gray-200 text-sm cursor-pointer'><FaPhone className='mr-2 text-lg'/> <span className='hidden sm:block'>Number</span></a>
+                    <a href="tel:" className='flex items-center text-gray-200 text-sm cursor-pointer ml-4'><MdLocationOn className='mr-2 text-lg'/> <span className='hidden sm:block'>Location</span></a>
                 </div>
                 <div className='flex text-lg text-white'>
                     <Link href={'#'}><FaFacebook className={'hover:text-gray-600 cursor-pointer'}/></Link>
