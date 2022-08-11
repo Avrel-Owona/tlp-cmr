@@ -8,15 +8,15 @@ function MyApp({ Component, pageProps }) {
   return (
       <HomeLayout>
           <Script strategy={"lazyOnload"} src={"https://www.googletagmanager.com/gtag/js?id=G-E4K29JR05G"}/>
-          <Script strategy={"lazyOnload"}
-                  {
-                      `window.dataLayer = window.dataLayer || [];
+          <Script strategy={"lazyOnload"}>
+              {
+                  `window.dataLayer = window.dataLayer || [];
                       function gtag(){dataLayer.push(arguments);}
                       gtag('js', new Date());
 
                       gtag('config', 'G-E4K29JR05G');`
-                  }
-          />
+              }
+          </Script>
         <Component {...pageProps} />
       </HomeLayout>
   )
