@@ -1,6 +1,7 @@
 import Link from "next/link";
 import RegissorCard from "../app/components/RegissorCard";
 import { Slider } from "../app/components/Slider";
+import {RegissorData} from "../app/utils/regissorData";
 
 
 export default function Home() {
@@ -40,10 +41,13 @@ export default function Home() {
           <div className='sm:px-20 pt-7 pb-40'>
               <h3 className='carte-text carte-text-after text-center text-4xl font-bold py-36'>Les regisseurs</h3>
               <div className='flex flex-wrap justify-center'>
-                <RegissorCard role={'Role'} name={'Name Regissor'}/>
-                <RegissorCard role={'Role'} name={'Name Regissor'}/>
-                <RegissorCard role={'Role'} name={'Name Regissor'}/>
-                <RegissorCard role={'Role'} name={'Name Regissor'}/>
+                  {
+                      RegissorData.map((regissor) => {
+                          return (
+                              <RegissorCard role={regissor.role} name={regissor.name}/>
+                          )
+                      })
+                  }
               </div>
           </div>
           <div className="w-full py-36 flex flex-col items-center sm:px-20 px-7">
