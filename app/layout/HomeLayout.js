@@ -3,6 +3,8 @@ import {Navbar} from "../components/Navbar";
 import Footer from "../components/Footer";
 import Head from "next/head";
 import {useRouter} from "next/router";
+import {FiDownload} from "react-icons/fi";
+import Link from "next/link";
 
 const HomeLayout = ({children}) => {
     const {pathname} = useRouter();
@@ -18,6 +20,7 @@ const HomeLayout = ({children}) => {
             <Navbar/>
             <div className='container flex flex-col justify-center mx-auto'>{children}</div>
             {pathname === '/contact' ? null : <Footer/>}
+
         </>
     );
 };
