@@ -37,7 +37,7 @@ export const Navbar = () => {
                     <a href="tel:" className='flex items-center text-gray-200 text-sm cursor-pointer ml-4'><MdLocationOn className='mr-2 text-lg'/> <span className='hidden sm:block'>Location</span></a>
                 </div>
                 <div className='flex text-lg text-white'>
-                    <Link href={'#'}><FaFacebook className={'hover:text-gray-600 cursor-pointer'}/></Link>
+                    <Link href={'https://www.facebook.com/tournonslapagecameroun'}><FaFacebook className={'hover:text-gray-600 cursor-pointer'}/></Link>
                     <Link href={'#'}><FaTwitter className={'ml-5 hover:text-gray-600 cursor-pointer'}/></Link>
                     <Link href={'#'}><FaYoutube className={'ml-5 hover:text-gray-600 cursor-pointer'}/></Link>
                 </div>
