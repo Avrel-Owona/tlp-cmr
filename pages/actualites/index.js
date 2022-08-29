@@ -5,7 +5,7 @@ import ActualityCard from "../../app/components/ActualityCard";
 const Index = () => {
 
     return (
-        <div className='w-screen relative'>
+        <div className='w-screen relative bg-ligne bg-no-repeat bg-center'>
             <div className='h-96 w-full relative mb-32'>
                 <div className="h-full w-full justify-center items-center absolute top-0 flex flex-col z-40">
                     <h3 className='text-white font-bold text-3xl sm:text-6xl uppercase text-center'>Actualités</h3>

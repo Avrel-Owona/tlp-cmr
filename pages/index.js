@@ -27,7 +27,7 @@ export default function Home() {
           </div>
           <div className='sm:px-20 pt-7 pb-40 flex flex-col items-center'>
               <h3 className='carte-text carte-text-after text-center text-4xl font-bold py-14 pt-32'>Nos valeurs</h3>
-              <p className='text-center w-full sm:w-9/12 text-xl text-gray-500 font-light bor'>Dédiée à l’alternance démocratique, la coalition TLP-CMR s’appuie sur les valeurs suivantes qui unissent ses membres : <br/>
+              <p className='text-center w-full sm:w-9/12 text-xl text-gray-500 font-light'>Dédiée à l’alternance démocratique, la coalition TLP-CMR s’appuie sur les valeurs suivantes qui unissent ses membres : <br/>
                   <span className='font-normal'>Le respect et la défense des droits humains et des libertés fondamentales, des droits économiques, sociaux et culturels et de l’accès aux ressources nationales,</span>
                   <span className='font-normal ml-2'>le caractère universel de la démocratie et de la défense des grands principes démocratiques</span>
                   <span className='font-normal ml-2'>le rôle central des contre-pouvoirs citoyens et des corps intermédiaires dans la vie politique et sociale,</span>

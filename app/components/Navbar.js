@@ -6,10 +6,11 @@ import Link from "next/link";
 
 
 import {ActiveLink} from "./Links";
-import {FaFacebook, FaPhone, FaTwitter, FaYoutube} from "react-icons/fa";
+import {FaFacebook, FaTwitter, FaYoutube} from "react-icons/fa";
 import {MdLocationOn} from "react-icons/md";
 import Dropdowns from "./Dropdowns";
 import {NavItems} from "../utils/navItems";
+import {IoLogoWhatsapp} from "react-icons/io";
 
 
 export const Navbar = () => {
@@ -31,19 +32,19 @@ export const Navbar = () => {
         <>
             
             <nav className="w-full sticky top-0 z-50 bg-white shadow-md">
-            <div className='h-9 shadow-black bg-orange-600 flex items-center px-7 lg:px-20 justify-between'>
-                <div className='flex items-center'>
-                    <a href="tel:" className='flex items-center text-gray-200 text-sm cursor-pointer'><FaPhone className='mr-2 text-lg'/> <span className='hidden sm:block'>Number</span></a>
-                    <a href="tel:" className='flex items-center text-gray-200 text-sm cursor-pointer ml-4'><MdLocationOn className='mr-2 text-lg'/> <span className='hidden sm:block'>Location</span></a>
+            <div className='h-9 contact shadow-black bg-orange-600 flex items-center px-7 lg:px-20 justify-between'>
+                <div className='flex h-full items-center mt-1'>
+                    <a href="https://wa.me/672098319" className='flex items-center text-gray-200 text-sm cursor-pointer'><IoLogoWhatsapp className='mr-2 text-lg'/> <span className='hidden sm:block'>672098319</span></a>
+                    <a href="#" className='flex items-center text-gray-200 text-sm cursor-pointer ml-4'><MdLocationOn className='mr-2 text-lg'/> <span className='hidden sm:block'>Mvog-Ada face mobil</span></a>
                 </div>
-                <div className='flex text-lg text-white'>
-                    <Link href={'https://www.facebook.com/tournonslapagecameroun'}><FaFacebook className={'hover:text-gray-600 cursor-pointer'}/></Link>
-                    <Link href={'#'}><FaTwitter className={'ml-5 hover:text-gray-600 cursor-pointer'}/></Link>
-                    <Link href={'#'}><FaYoutube className={'ml-5 hover:text-gray-600 cursor-pointer'}/></Link>
+                <div className='flex h-full items-center mt-2 text-lg text-white'>
+                    <a href={'https://www.facebook.com/tournonslapagecameroun'} target='_blank'><FaFacebook className={'hover:text-gray-600 cursor-pointer'}/></a>
+                    <a href={'#'}><FaTwitter className={'ml-5 hover:text-gray-600 cursor-pointer'}/></a>
+                    <a href={'#'}><FaYoutube className={'ml-5 hover:text-gray-600 cursor-pointer'}/></a>
                 </div>
             </div>
                 <>
-                <div className={`flex items-center justify-center h-20 w-full bg-white`}>
+                <div className={`flex items-center justify-center bar-nav h-20 w-full bg-white`}>
                     {/*=========== NAVBAR PC ================*/}
                     <div className='flex items-center sm:mx-20 mx-7 justify-between w-full nav'>
                         <div className={`justify-center flex  items-center flex-shrink-0 cursor-pointer`}>

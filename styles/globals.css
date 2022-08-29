@@ -12,6 +12,15 @@
     margin-left: 0;
     margin-top: 2rem;
 }
+.contact {
+    position: absolute;
+    width: 100%;
+    z-index: 11111111111111111;
+    top: -37px;
+}
+.bar-nav {
+    margin-top: 30px;
+}
 .carte-text-after::after{
     margin-left: auto;
     margin-right: auto;
