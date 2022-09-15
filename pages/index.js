@@ -44,7 +44,7 @@ export default function Home() {
                   {
                       RegissorData.map((regissor) => {
                           return (
-                              <RegissorCard role={regissor.role} name={regissor.name}/>
+                              <RegissorCard img={regissor.profileImg} role={regissor.role} name={regissor.name}/>
                           )
                       })
                   }

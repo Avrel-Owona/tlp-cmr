@@ -28,13 +28,7 @@ const Contact = () => {
                                     <div className='flex flex-col text-sm w-80 mt-8 text-center sm:text-left'>
                                         <h3 className='text-2xl text-orange-600 pb-6'>Heure d'ouvertuve</h3>
                                         <ul>
-                                            <li>Lundi: 9:30 - 17:00</li>
-                                            <li>Mardi: 9:30 - 17:00</li>
-                                            <li>Mercredi: 9:30 - 17:00</li>
-                                            <li>Jeudi: 9:30 - 17:00</li>
-                                            <li>Vendredi: 9:30 - 17:00</li>
-                                            <li>Samedi: Fermé</li>
-                                            <li>Dimanche: Fermé</li>
+                                            <li>Lundi - Vendredi : 9:30 - 17:00</li>
                                         </ul>
                                     </div>
                                 </div>
