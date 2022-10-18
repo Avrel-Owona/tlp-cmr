@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import RegissorCard from "../app/components/RegissorCard";
 import {ImagesItems} from "../app/utils/ImagesItems";
-import {AiOutlineClose} from "react-icons/ai";
 import Link from "next/link";
+import PageHeader from '../app/components/PageHeader';
+import Modal from '../app/components/Modal';
 
 const TlpCmr = () => {
 
@@ -17,12 +18,8 @@ const TlpCmr = () => {
     console.log(modal)
     return (
         <>
-            <div className={`${modal ? 'scale-100 opacity-1 visible modal fixed top-0 left-0 w-full h-screen bg-black flex items-center justify-center overflow-hidden' : 'opacity-0 hidden'}`}>
-                <button className='border justify-center items-center flex fixed text-white text-2xl top-10 right-10 cursor-pointer' onClick={()=>setModal(false)}>
-                    <AiOutlineClose/>
-                </button>
-                <img className='h-auto max-h-full w-auto max-w-full py-10' src={imgSrc} alt=""/>
-            </div>
+            <PageHeader cover={'/groupe.jpeg'} title={'TLP CAMEROUN'} />
+            <Modal imgSrc={imgSrc} modal={modal} setModal={setModal}/>
             <div className="bg-gray-100 w-full py-36 flex flex-col items-center sm:px-20 px-7"><h1
                 className="font-bold text-3xl sm:text-4xl text-center text-gray-800 carte-text carte-text-after">Mouvement Tournons
                 La Page <br/> Cameroun</h1><p className="mt-20 text-center w-full sm:w-9/12 text-xl text-gray-500 font-light">Tournons

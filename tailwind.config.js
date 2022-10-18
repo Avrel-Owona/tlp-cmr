@@ -6,8 +6,18 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    borderWidth: {
+      '0.5': '0.5px',
+    },
     backgroundImage: {
-      'ligne': "url('/ligne.svg')",
+      'default': "url('/ligne.svg')",
+      'card-news' : 'linear-gradient(0deg, rgb(33, 37, 41) 0px, rgba(33, 37, 41, 0) 100%)'
+    },
+    extend: {
+      inset: {
+        '-15%': '-15%',
+        '10%': '10%',
+      }
     }
   },
   plugins: [],

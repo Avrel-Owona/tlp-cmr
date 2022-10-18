@@ -1,28 +1,62 @@
 import React from 'react';
-import {FiDownload} from "react-icons/fi";
-import Link from "next/link";
+import {FiArrowRight } from "react-icons/fi";
 
-const ActualityCard = ({pageLink, img, title, textButton, fileSrc}) => {
+const ActualityCard = ({posts, postsPerPage, totalPosts, paginate, currentPage}) => {
+    console.log('posts', posts)
+
+    const pageNumber = [];
+    for(let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
+        pageNumber.push(i)
+    }
     const downloadFile = () => {
         window.location.href = `/doc/${fileSrc}`
     }
+    const paginateTop = (number) => {
+        paginate(number)
+        window.scrollTo({
+            top: 384,
+            behavior: 'smooth'
+          });
+    }
 
     return (
-        <Link href={pageLink}>
-            <div className='w-full lg:w-5/12 mb-4 h-96 relative cursor-pointer border md:w-6/12 lg:m-4'>
-                <div className='h-full w-full flex flex-col justify-center absolute'>
-                    <div className='w-full lg:w-96 '>
-                        <h3 className='px-3 pt-5 pb-9 bg-orange-500 text-white'>
-                            {title}
-                        </h3>
-                        <a className={textButton ? 'px-8 py-4 -m-5 bg-black text-white ml-3 flex max-w-max items-center' : 'hidden'} onClick={downloadFile}>
-                            {textButton} <span><FiDownload className='text-white ml-2'/></span>
-                        </a>
-                    </div>
+        <section className='flex flex-col items-center bg-default'>
+                <div className='flex flex-wrap justify-center px-2 sm:px-3 mt-40 border w-full'>
+                {posts.map((actuality, index)=>{
+                    return (
+                        <div key={index} className='card-news border'>
+                            <img src={actuality.cover} className='h-full w-full object-cover'/>
+                            <div className='flex items-end bg-card-news absolute top-0 w-full h-full'>
+                                        <div className='flex flex-col justify-between p-8 text-white'>
+                                            <h3 className='bg-orange-500 absolute top-0 right-0 h-9 text-sm flex items-center text-white justify-center font-light px-12 uppercase'>{actuality.type}</h3>
+                                            <>
+                                                <h3 className='title-card-news'>
+                                                {actuality.title}
+                                                </h3>
+                                                <div className='flex items-baseline justify-between'>
+                                                    <a href={`/actualites/${actuality.id}`} className='flex items-center mt-8 font-extralight cursor-pointer'>Lire <FiArrowRight className='text-2xl pl-3 text-orange-500'/></a>
+                                                    <span className='date-card-news'>{actuality.date}</span>
+                                                </div>
+                                            </>
+                                        </div>
+                            </div>
+                        </div>
+                    )
+                })}
                 </div>
-                <img src={img} alt="" className='w-full h-full object-cover z-0'/>
-            </div>
-        </Link>
+                <nav>
+                <ul className="flex my-12">
+                        {pageNumber.map((number, index)=> {
+                            return (
+                                <li key={index}>
+                                    <a className={` py-2 px-4 my-0 mx-2 cursor-pointer  ${index + 1 === currentPage ? 'bg-orange-500 text-white' : 'border-0.5 border-orange-500 text-orange-500 bg-white'}`} onClick={()=> paginateTop(number)}>{number}</a>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </nav>
+            </section>
+        
     );
 };
 

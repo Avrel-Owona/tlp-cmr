@@ -18,7 +18,7 @@ const HomeLayout = ({children}) => {
                 <link rel="icon" href="/icon.png" />t
             </Head>
             <Navbar/>
-            <div className='container flex flex-col justify-center mx-auto'>{children}</div>
+            <div className='container container-layout flex flex-col justify-center mx-auto'>{children}</div>
             {pathname === '/contact' ? null : <Footer/>}
 
         </>

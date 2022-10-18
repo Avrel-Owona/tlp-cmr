@@ -34,13 +34,13 @@ export const Navbar = () => {
             <nav className="w-full sticky top-0 z-50 bg-white shadow-md">
             <div className='h-9 contact shadow-black bg-orange-600 flex items-center px-7 lg:px-20 justify-between'>
                 <div className='flex h-full items-center mt-1'>
-                    <a href="https://wa.me/672098319" className='flex items-center text-gray-200 text-sm cursor-pointer'><IoLogoWhatsapp className='mr-2 text-lg'/> <span className='hidden sm:block'>672098319</span></a>
-                    <a href="#" className='flex items-center text-gray-200 text-sm cursor-pointer ml-4'><MdLocationOn className='mr-2 text-lg'/> <span className='hidden sm:block'>Mvog-Ada face mobil</span></a>
+                    <a href="https://wa.me/672098319" className='flex items-center text-gray-200 text-sm cursor-pointer'><IoLogoWhatsapp className='mr-2 text-lg svg-nav'/> <span className='hidden sm:block'>672098319</span></a>
+                    <a href="#" className='flex items-center text-gray-200 text-sm cursor-pointer ml-4'><MdLocationOn className='mr-2 text-lg svg-nav'/> <span className='hidden sm:block'>Mvog-Ada face mobil</span></a>
                 </div>
                 <div className='flex h-full items-center mt-2 text-lg text-white'>
-                    <a href={'https://www.facebook.com/tournonslapagecameroun'} target='_blank'><FaFacebook className={'hover:text-gray-600 cursor-pointer'}/></a>
-                    <a href={'#'}><FaTwitter className={'ml-5 hover:text-gray-600 cursor-pointer'}/></a>
-                    <a href={'#'}><FaYoutube className={'ml-5 hover:text-gray-600 cursor-pointer'}/></a>
+                    <a href={'https://www.facebook.com/tournonslapagecameroun'} target='_blank'><FaFacebook className={'hover:text-gray-600 cursor-pointer svg-nav'}/></a>
+                    <a href={'#'}><FaTwitter className={'ml-5 hover:text-gray-600 cursor-pointer svg-nav'}/></a>
+                    <a href={'#'}><FaYoutube className={'ml-5 hover:text-gray-600 cursor-pointer svg-nav'}/></a>
                 </div>
             </div>
                 <>
