@@ -110,4 +110,4 @@ const ActualityDetails = ({date, image, title, type, description, picturesGalery
     )
 }
 
-export default ActualityDetails;
+export default ActualityDetails;  
