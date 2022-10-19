@@ -7,14 +7,13 @@ const SectionCardsNews = () => {
     const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
-    const [postsPerPage, setPostsPerPage] = useState(4)
+    const [postsPerPage, setPostsPerPage] = useState(8)
 
     // Les postes
     const fetchPosts = () => {
         setLoading(true)
         setPosts(NewsItemsCards)
         setLoading(false)
-        console.log('les posts', posts)
     }
     // Get current post
     const indexOfLastPost = currentPage * postsPerPage
@@ -27,8 +26,7 @@ const SectionCardsNews = () => {
     },[])
     return (
         <>
-        {loading ? 'Loading...' : null}
-
+            {loading ? 'Loading...' : null}
             <ActualityCard posts={currentPosts} postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} currentPage={currentPage} />
         </>
     )
