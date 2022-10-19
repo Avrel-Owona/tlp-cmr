@@ -14,16 +14,16 @@ const ActualityDetails = ({date, image, title, type, description, picturesGalery
     const [imgSrc, setImgSrc] = useState('')
 
 
-    // const getList = () => {
-    //     const newListActualities = actualitiesList.map((e)=> e.id !== id)
-    //     // setActualitiesList(newListActualities)
-    //     console.log('list', newListActualities)
-    // }
-    // useEffect(()=>{
-    //     setTimeout(()=>{
-    //         getList() 
-    //     }, 3000)
-    // }, [])
+    const getList = () => {
+        const newListActualities = actualitiesList.map((e)=> e.id !== id)
+        // setActualitiesList(newListActualities)
+        console.log('list', newListActualities)
+    }
+    useEffect(()=>{
+        setTimeout(()=>{
+            getList() 
+        }, 3000)
+    }, [])
     console.log('id', id)
     const getImg = (img) => { 
         setModal(true)

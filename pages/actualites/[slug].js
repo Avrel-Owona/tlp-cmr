@@ -4,7 +4,7 @@ import ActualityDetails from "../../app/components/ActualityDetails"
 import { NewsItemsCards } from "../../app/utils/navItems"
 
 
-const Slug = ({path, id}) => {
+const Slug = () => {
     const [actualityDetails, setActualityDetails] = useState([])
     const actualityId = useRouter()
     // console.log('idSlug', actualityId.query.data)
