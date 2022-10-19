@@ -7,15 +7,18 @@ import { NewsItemsCards } from "../../app/utils/navItems"
 const Slug = () => {
     const [actualityDetails, setActualityDetails] = useState([])
     const actualityId = useRouter()
+    console.log('id', actualityId)
 
     const slug = actualityId.query.slug
     useEffect(()=> {
         setActualityDetails(NewsItemsCards)
     },[])
-    let slugDetails = actualityDetails[slug - 1]
+    // let slugDetails = actualityDetails[slug - 1]
+    let slugDetails = actualityDetails
+    console.log('slugDetails', slugDetails)
     
 
-    return <ActualityDetails date={slugDetails?.date} image={slugDetails?.cover} title={slugDetails?.title} type={slugDetails?.type} description={slugDetails?.description} picturesGalery={slugDetails?.picturesGalery} pictures={slugDetails?.pictures} />
+    return <ActualityDetails id={slugDetails?.id} date={slugDetails?.date} image={slugDetails?.cover} title={slugDetails?.title} type={slugDetails?.type} description={slugDetails?.description} picturesGalery={slugDetails?.picturesGalery} pictures={slugDetails?.pictures} author={slugDetails?.author} documentPDF={slugDetails?.documentPDF} documents={slugDetails?.documents}/>
 }
 
 export default Slug

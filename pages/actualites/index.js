@@ -9,7 +9,7 @@ const Index = () => {
 
     return (
         <div className='w-screen relative bg-ligne bg-no-repeat bg-center'>
-            <PageHeader cover={"/jmb.jpeg"} title={'actualités'}/>
+            <PageHeader cover={"groupe.jpeg"} title={'actualités'}/>
             <SectionCardsNews/>
             {/* <div className='px-7 lg:px-20 flex flex-wrap justify-center md:justify-between mb-32'>
                 {EventsData.map((event)=>{

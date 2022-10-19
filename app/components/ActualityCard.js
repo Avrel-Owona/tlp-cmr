@@ -1,9 +1,10 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 import {FiArrowRight } from "react-icons/fi";
 
 const ActualityCard = ({posts, postsPerPage, totalPosts, paginate, currentPage}) => {
-    console.log('posts', posts)
 
+    
     const pageNumber = [];
     for(let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
         pageNumber.push(i)
@@ -18,23 +19,31 @@ const ActualityCard = ({posts, postsPerPage, totalPosts, paginate, currentPage})
             behavior: 'smooth'
           });
     }
+    const router = useRouter()
+    const getActuality = (path,id) => {
+        // console.log({
+        //     path : path,
+        //     id : id,
+        // })
+        router.push(`/actualites/${path}`, {slug : id})
+    }
 
     return (
         <section className='flex flex-col items-center bg-default'>
-                <div className='flex flex-wrap justify-center px-2 sm:px-3 mt-40 border w-full'>
+                <div className='flex flex-wrap justify-center px-2 sm:px-3 sm:mt-40 border w-full'>
                 {posts.map((actuality, index)=>{
                     return (
                         <div key={index} className='card-news border'>
                             <img src={actuality.cover} className='h-full w-full object-cover'/>
                             <div className='flex items-end bg-card-news absolute top-0 w-full h-full'>
-                                        <div className='flex flex-col justify-between p-8 text-white'>
+                                        <div className='flex flex-col justify-between p-8 text-white w-full'>
                                             <h3 className='bg-orange-500 absolute top-0 right-0 h-9 text-sm flex items-center text-white justify-center font-light px-12 uppercase'>{actuality.type}</h3>
                                             <>
-                                                <h3 className='title-card-news'>
+                                                <h3 className='title-card-news font-semibold font-news'>
                                                 {actuality.title}
                                                 </h3>
                                                 <div className='flex items-baseline justify-between'>
-                                                    <a href={`/actualites/${actuality.id}`} className='flex items-center mt-8 font-extralight cursor-pointer'>Lire <FiArrowRight className='text-2xl pl-3 text-orange-500'/></a>
+                                                    <a onClick={()=>getActuality(actuality.path, actuality.id)} className='flex items-center mt-8 font-extralight cursor-pointer'>Lire <FiArrowRight className='text-2xl pl-3 text-orange-500'/></a>
                                                     <span className='date-card-news'>{actuality.date}</span>
                                                 </div>
                                             </>

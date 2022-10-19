@@ -33,7 +33,7 @@ export const Navbar = () => {
             
             <nav className="w-full sticky top-0 z-50 bg-white shadow-md">
             <div className='h-9 contact shadow-black bg-orange-600 flex items-center px-7 lg:px-20 justify-between'>
-                <div className='flex h-full items-center mt-1'>
+                <div className='flex h-full items-center mt-1 font-light'>
                     <a href="https://wa.me/672098319" className='flex items-center text-gray-200 text-sm cursor-pointer'><IoLogoWhatsapp className='mr-2 text-lg svg-nav'/> <span className='hidden sm:block'>672098319</span></a>
                     <a href="#" className='flex items-center text-gray-200 text-sm cursor-pointer ml-4'><MdLocationOn className='mr-2 text-lg svg-nav'/> <span className='hidden sm:block'>Mvog-Ada face mobil</span></a>
                 </div>
@@ -55,24 +55,22 @@ export const Navbar = () => {
                         </div>
                         <div className='hidden lg:block relative'>
                             <ul className='ml-10 flex items-baseline'>
-                                {NavItems.map((item)=>{
+                                {NavItems.map((item, index)=>{
                                     if (item.title === 'Régions') {
                                         return (
-                                            <>
-                                                <ActiveLink activeClassName="font-semibold border-b-2 border-orange-600" href={item.path}>
-                                                    <li key={item.id} className='cursor-pointer font-sans mx-5 py-36 text-sm'
+                                                <ActiveLink key={index} activeClassName="font-semibold text-orange-500 border-b-2 border-orange-600" href={item.path}>
+                                                    <li className='cursor-pointer font-sans mx-5 py-36 text-sm'
                                                         onMouseEnter={()=>setDropdown(true)}
                                                         onMouseLeave={()=>setDropdown(false)}>
                                                         {item.title}
                                                         {dropdown && <Dropdowns/>}
                                                     </li>
                                                 </ActiveLink>
-                                            </>
                                         )
                                     }
                                     return (
-                                        <ActiveLink activeClassName="font-semibold l border-b-2 border-orange-600" href={item.path}>
-                                            <li key={item.id} className='cursor-pointer font-sans mx-5 py-2 text-sm'>{item.title}</li>
+                                        <ActiveLink key={index} activeClassName="font-semibold text-orange-500 l border-b-2 border-orange-600" href={item.path}>
+                                            <li className='cursor-pointer font-sans mx-5 py-2 text-sm'>{item.title}</li>
                                         </ActiveLink>
                                     )
                                 })}

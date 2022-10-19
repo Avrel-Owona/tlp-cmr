@@ -1,12 +1,17 @@
 export const sliderData = [
     {
-        imgSrc : '/groupe-tlp.png',
+        imgSrc : "/agnes_metougou.png",
         title : 'TOURNONS LA PAGE CAMEROUN',
-        subtitle : 'Tournons La Page est un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne.'
+        subtitle : 'Nous sommes un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne.'
     },
     {
-        imgSrc : '/groupe.jpeg',
+        imgSrc : '/groupe-tlp.png',
         title : 'TOURNONS LA PAGE CAMEROUN',
-        subtitle : 'Tournons La Page est un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne.'
+        subtitle : 'Nous sommes un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne.'
     },
+    // {
+    //     imgSrc : '/groupe-tlp.png',
+    //     title : 'TOURNONS LA PAGE CAMEROUN',
+    //     subtitle : 'Nous sommes un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne.'
+    // },
 ]

@@ -34,10 +34,10 @@ export const Slider = () => {
 
     return (
         <div className="slider">
-            <div className="text-white">
+            {/* <div className="text-white">
                  <FcPrevious className="svg text-3xl cursor-pointer absolute slide-button text-white" onClick={prevSlide}/>
                  <FcNext className="svg text-3xl cursor-pointer absolute slide-button text-white right-0" onClick={nextSlide}/>
-            </div>
+            </div> */}
             
             {sliderData.map((slide, index)=> {
 
@@ -47,8 +47,8 @@ export const Slider = () => {
                             <>
                                 <img src={slide.imgSrc} className='w-full object-cover h-full'/>
                                 <div className="content absolute flex flex-col top-0 h-full w-full justify-center lg:pl-52 items-center lg:items-start z-40 sm:px-20 px-7">
-                                    <h3 class="text-white w-full lg:w-3/6 font-bold text-4xl sm:text-6xl uppercase text-center lg:text-left">{slide.title}</h3>
-                                    <p class="pt-10 w-10/12 lg:w-4/12 text-white text-xl font-light text-center lg:text-left">{slide.subtitle}</p>
+                                    <h3 class="text-white w-full lg:w-3/6 font-bold text-4xl sm:text-8xl uppercase text-center lg:text-left font-news">{slide.title}</h3>
+                                    <p class="pt-10 w-10/12 lg:w-4/12 text-white text-xl lg:text-2xl font-extralight text-center lg:text-left">{slide.subtitle}</p>
                                 </div>
                             </>
                         )}
