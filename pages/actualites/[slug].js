@@ -4,17 +4,17 @@ import ActualityDetails from "../../app/components/ActualityDetails"
 import { NewsItemsCards } from "../../app/utils/navItems"
 
 
-const Slug = () => {
+const Slug = ({path, id}) => {
     const [actualityDetails, setActualityDetails] = useState([])
     const actualityId = useRouter()
-    console.log('id', actualityId)
+    // console.log('idSlug', actualityId.query.data)
 
-    const slug = actualityId.query.slug
+    const slug = actualityId.query.data
     useEffect(()=> {
         setActualityDetails(NewsItemsCards)
     },[])
-    // let slugDetails = actualityDetails[slug - 1]
-    let slugDetails = actualityDetails
+    let slugDetails = actualityDetails[slug - 1]
+    // let slugDetails = actualityDetails
     console.log('slugDetails', slugDetails)
     
 

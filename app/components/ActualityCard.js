@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+import Router, { useRouter } from 'next/router';
 import React from 'react';
 import {FiArrowRight } from "react-icons/fi";
 
@@ -19,13 +19,16 @@ const ActualityCard = ({posts, postsPerPage, totalPosts, paginate, currentPage})
             behavior: 'smooth'
           });
     }
-    const router = useRouter()
+    // const router = useRouter()
     const getActuality = (path,id) => {
         // console.log({
-        //     path : path,
-        //     id : id,
+        //     pathname : `/actualites/${path}`, 
+        //     query : {slug : id}
         // })
-        router.push(`/actualites/${path}`, {slug : id})
+        Router.push({
+            pathname : `/actualites/${path}`, 
+            query : {data : JSON.stringify(id)},
+        })
     }
 
     return (
