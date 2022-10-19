@@ -2,9 +2,9 @@ import Head from 'next/head';
 import React, {useEffect, useState} from 'react';
 import {FaFacebook, FaFilePdf, FaTwitter} from "react-icons/fa";
 import {GrLinkedinOption} from "react-icons/gr";
-import Modal from '../components/modal'
 import { NewsItemsCards } from '../utils/navItems';
 import HeaderAbout from './HeaderAbout';
+import Modal from './Modal';
 
 
 const ActualityDetails = ({date, image, title, type, description, picturesGalery, pictures, author, documents, documentPDF, id}) => {
