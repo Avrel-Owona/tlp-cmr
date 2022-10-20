@@ -67,21 +67,21 @@ const ActualityDetails = ({date, image, title, type, description, picturesGalery
                 <div className='mt-10 flex'>
                     <div className='text-3xl flex-col flex'>
                         <FacebookShareButton
-                            url={`tournonslapagecameroun.org/${router.asPath}`}
+                            url={`tournonslapagecameroun.org${router.asPath}`}
                             quote={description}
                             hashtag={"#TournonsLaPageCameroun"}
                         >
                             <FaFacebook size={40} round className='mb-4 text-orange-500' />
                         </FacebookShareButton>
                         <WhatsappShareButton
-                            url={`tournonslapagecameroun.org/${router.asPath}`}
+                            url={`tournonslapagecameroun.org${router.asPath}`}
                             hashtag={"#TournonsLaPageCameroun"}
                             separator=":: "
                         >
                             <FaWhatsapp size={40} round className='mb-4 text-orange-500'/>
                         </WhatsappShareButton>
                         <TwitterShareButton
-                            url={`tournonslapagecameroun.org/${router.asPath}`}
+                            url={`tournonslapagecameroun.org${router.asPath}`}
                             hashtag={"#TournonsLaPageCameroun"}
                             title={description}
                         >
