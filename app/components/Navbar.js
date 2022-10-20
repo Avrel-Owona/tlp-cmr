@@ -58,7 +58,7 @@ export const Navbar = () => {
                     <div className='flex items-center sm:mx-20 mx-7 justify-between w-full nav'>
                         <div className={`justify-center flex  items-center flex-shrink-0 cursor-pointer`}>
                             <Link href={'/'}>
-                                <img className={`w-32 pt-4 ${pathname === '/' ? (bgColor === 'bg-transparent' ? 'invert' : 'filter-none') : 'filter-none'}`} src='/icon-navbar.png' alt="TLP TV logo"/>
+                                <img className={`w-32 pt-4`} src={pathname === '/' ? (bgColor === 'bg-transparent' ? '/icon-navbar-white.png' : '/icon-navbar.png') : '/icon-navbar.png'}  alt="TLP TV logo"/>
                                 {/*<span className='font-bold'>CMR</span>*/}
                             </Link>
                         </div>
