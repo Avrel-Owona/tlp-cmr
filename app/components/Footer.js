@@ -15,7 +15,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='wrapper-copyright flex flex-wrap-reverse justify-center xl:justify-between py-16 font-light'>
-                <span className='mt-6 lg:mt-0'>OWEN'S Entreprise © {new Date().getFullYear()} - Tous droits réservés</span>
+                <span className='mt-6 lg:mt-0'>Avrel OWONA © {new Date().getFullYear()} - Tous droits réservés</span>
                 <ul className='flex'>
                         {FooterItems.map((li, index)=> {
                             return <Link key={index} href={li.path}><li className='cursor-pointer'>{li.title}</li></Link>

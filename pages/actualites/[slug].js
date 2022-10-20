@@ -14,8 +14,6 @@ const Slug = () => {
         setActualityDetails(NewsItemsCards)
     },[])
     let slugDetails = actualityDetails[slug - 1]
-    // let slugDetails = actualityDetails
-    console.log('slugDetails', slugDetails)
     
 
     return <ActualityDetails id={slugDetails?.id} date={slugDetails?.date} image={slugDetails?.cover} title={slugDetails?.title} type={slugDetails?.type} description={slugDetails?.description} picturesGalery={slugDetails?.picturesGalery} pictures={slugDetails?.pictures} author={slugDetails?.author} documentPDF={slugDetails?.documentPDF} documents={slugDetails?.documents}/>

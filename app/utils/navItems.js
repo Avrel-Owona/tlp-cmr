@@ -11,63 +11,63 @@ export const NavItems = [
     },
     {
         id : 3,
-        title : 'TLP TV',
-        path : '/tlp_tv'
+        title : 'Web TV',
+        path : '/web_tv'
     },
     {
         id : 3,
         title : 'TLP CMR',
         path : '/tlp_cmr'
     },
-    {
-        id : 4,
-        title : 'Régions',
-        path : '',
-        subMenu : true,
-        subLinks : [
-            {
-                title : 'Centre',
-                // pathname : '/regions/centre'
-                pathname : '/regions/centre'
-            },
-            {
-                title : 'Adamaoua',
-                pathname : '/regions/adamaoua'
-            },
-            {
-                title : 'Est',
-                pathname : '/regions/est'
-            },
-            {
-                title : 'Extrême-Nord',
-                pathname : '/regions/extreme-nord'
-            },
-            {
-                title : 'Littoral',
-                pathname : '/regions/littoral'
-            },
-            {
-                title : 'Nord',
-                pathname : '/regions/nord'
-            },
-            {
-                title : 'Nord-Ouest',
-                pathname : '/regions/nord-ouest'
-            },
-            {
-                title : 'Ouest',
-                pathname : '/regions/ouest'
-            },
-            {
-                title : 'Sud-Ouest',
-                pathname : '/regions/sud-ouest'
-            },
-            {
-                title : 'Sud',
-                pathname : '/regions/sud'
-            }
-        ]
-    },
+    // {
+    //     id : 4,
+    //     title : 'Régions',
+    //     path : '',
+    //     subMenu : true,
+    //     subLinks : [
+    //         {
+    //             title : 'Centre',
+    //             // pathname : '/regions/centre'
+    //             pathname : '/regions/centre'
+    //         },
+    //         {
+    //             title : 'Adamaoua',
+    //             pathname : '/regions/adamaoua'
+    //         },
+    //         {
+    //             title : 'Est',
+    //             pathname : '/regions/est'
+    //         },
+    //         {
+    //             title : 'Extrême-Nord',
+    //             pathname : '/regions/extreme-nord'
+    //         },
+    //         {
+    //             title : 'Littoral',
+    //             pathname : '/regions/littoral'
+    //         },
+    //         {
+    //             title : 'Nord',
+    //             pathname : '/regions/nord'
+    //         },
+    //         {
+    //             title : 'Nord-Ouest',
+    //             pathname : '/regions/nord-ouest'
+    //         },
+    //         {
+    //             title : 'Ouest',
+    //             pathname : '/regions/ouest'
+    //         },
+    //         {
+    //             title : 'Sud-Ouest',
+    //             pathname : '/regions/sud-ouest'
+    //         },
+    //         {
+    //             title : 'Sud',
+    //             pathname : '/regions/sud'
+    //         }
+    //     ]
+    // },
     {
         id : 5,
         title : 'Offres',

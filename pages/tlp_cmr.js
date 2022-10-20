@@ -5,6 +5,8 @@ import Link from "next/link";
 import PageHeader from '../app/components/PageHeader';
 import Modal from '../app/components/Modal';
 import HeaderAbout from '../app/components/HeaderAbout';
+import HeadSeo from '../app/components/HeadSeo';
+import { useRouter } from 'next/router';
 
 const TlpCmr = () => {
 
@@ -16,9 +18,11 @@ const TlpCmr = () => {
         setImgSrc(img)
         console.log(modal)
     }
-    console.log(modal)
+    const router = useRouter()
+
     return (
         <>
+            <HeadSeo currentURL={router.asPath} pageTitle={'Qui sommes nous ?'} description={'Nous sommes un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne.'} previewImage={'/groupe.jpeg'}/>
             <PageHeader cover={'/groupe.jpeg'} title={'TLP CAMEROUN'} />
             <Modal imgSrc={imgSrc} modal={modal} setModal={setModal}/>
             <div className="sm:px-20 px-7">

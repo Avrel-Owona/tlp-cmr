@@ -5,7 +5,7 @@ export const sliderData = [
         subtitle : 'Nous sommes un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne.'
     },
     {
-        imgSrc : '/groupe-tlp.png',
+        imgSrc : "/agnes_metougou.png",
         title : 'TOURNONS LA PAGE CAMEROUN',
         subtitle : 'Nous sommes un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne.'
     },

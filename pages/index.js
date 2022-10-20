@@ -45,9 +45,9 @@ export default function Home() {
               <h3 className='carte-text carte-text-after text-center text-4xl font-bold py-36 font-news uppercase'>Les regisseurs</h3>
               <div className='flex flex-wrap justify-center'>
                   {
-                      RegissorData.map((regissor) => {
+                      RegissorData.map((regissor, index) => {
                           return (
-                              <RegissorCard img={regissor.profileImg} role={regissor.role} name={regissor.name}/>
+                              <RegissorCard key={index} img={regissor.profileImg} role={regissor.role} name={regissor.name}/>
                           )
                       })
                   }

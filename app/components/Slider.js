@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, {useEffect, useState} from "react";
 import {FcNext, FcPrevious} from "react-icons/fc";
 import { sliderData } from "../utils/sliderData";
@@ -6,7 +7,7 @@ import { sliderData } from "../utils/sliderData";
 export const Slider = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
     const sliderLength = sliderData.length
-    const autoScroll = true
+    const autoScroll = false
     let slideInterval
     let intervalTime = 5000
 
@@ -43,7 +44,7 @@ export const Slider = () => {
 
                 return (
                     <div className={index === currentSlide ? 'slide current' : 'slide'} key={index}>
-                        {index === currentSlide && (
+                        {/* {index === currentSlide && (
                             <>
                                 <img src={slide.imgSrc} className='w-full object-cover h-full'/>
                                 <div className="content absolute flex flex-col top-0 h-full w-full justify-center lg:pl-52 items-center lg:items-start z-40 sm:px-20 px-7">
@@ -51,7 +52,15 @@ export const Slider = () => {
                                     <p class="pt-10 w-10/12 lg:w-4/12 text-white text-xl lg:text-2xl font-extralight text-center lg:text-left">{slide.subtitle}</p>
                                 </div>
                             </>
-                        )}
+                        )} */}
+                        <>
+                                <img src={slide.imgSrc} className='w-full object-cover h-full'/>
+                                <div className="content absolute flex flex-col top-0 h-full w-full justify-center lg:pl-52 items-center lg:items-start z-40 sm:px-20 px-7">
+                                    <h3 class="text-white w-full lg:w-3/6 font-bold text-4xl sm:text-8xl uppercase text-center lg:text-left font-news">{slide.title}</h3>
+                                    <p class="pt-10 w-10/12 lg:w-4/12 text-white text-xl lg:text-2xl font-extralight text-center lg:text-left">{slide.subtitle}</p>
+                                    <Link href={'/tlp_cmr'}><button className="px-12 py-4 bg-orange-600 mt-10 font-light sm:text-2xl text-white">En savoir plus</button></Link>
+                                </div>
+                            </>
                     </div>
                 )
             })}

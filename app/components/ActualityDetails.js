@@ -1,33 +1,45 @@
 import Head from 'next/head';
-import React, {useEffect, useState} from 'react';
+import Router, { useRouter } from 'next/router';
+import React, {useEffect, useMemo, useState} from 'react';
 import {FaFacebook, FaFilePdf, FaTwitter} from "react-icons/fa";
 import {GrLinkedinOption} from "react-icons/gr";
 import { NewsItemsCards } from '../utils/navItems';
 import HeaderAbout from './HeaderAbout';
+import HeadSeo from './HeadSeo';
 import Modal from './Modal';
 
 
 const ActualityDetails = ({date, image, title, type, description, picturesGalery, pictures, author, documents, documentPDF, id}) => {
     
-    const [modal, setModal] = useState(false)
+
     const [actualitiesList, setActualitiesList] = useState(NewsItemsCards)
+    const [isBlock, setIsBlock] = useState(false)
+    const [modal, setModal] = useState(false)
     const [imgSrc, setImgSrc] = useState('')
 
+    Router.events.on("routeChangeStart", () =>{
+        setIsBlock(false)
+    });
 
-    const getList = () => {
-        const newListActualities = actualitiesList.map((e)=> e.id !== id)
-        // setActualitiesList(newListActualities)
+    const router = useRouter()
+
+
+    const getMoreActulities = () => {
+        const newListActualities = actualitiesList.filter((e)=> e.id !== id)
+        setActualitiesList(newListActualities)
+        setIsBlock(true)
         console.log('list', newListActualities)
     }
-    useEffect(()=>{
-        setTimeout(()=>{
-            getList() 
-        }, 3000)
-    }, [])
-    console.log('id', id)
+
     const getImg = (img) => { 
         setModal(true)
         setImgSrc(img)
+    }
+    const getActuality = (path,id) => {
+        Router.push({
+            pathname : `/actualites/${path}`, 
+            query : {data : JSON.stringify(id)},
+        })
     }
     
 
@@ -40,18 +52,8 @@ const ActualityDetails = ({date, image, title, type, description, picturesGalery
 
     return (
         <>
-            <Head>
-                <title>Tournons La Page Cameroun</title>
-                <meta name="description" content={title} />
-                <meta name="og:description" property={description ? description : title} />
-                <meta name="og:image" property="og:image" content={image} />
-                <meta name="og:type" property="og:type" content="article" />
-                <meta name="og:url" property="og:url" content={`https://tournonslapagecameroun.org/actualites/${id}`} />
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css"
-                      integrity="sha512-42kB9yDlYiCEfx2xVwq0q7hT4uf26FUgSIZBK8uiaEnTdShXjwr8Ip1V4xGJMg3mHkUt9nNuTDxunHF0/EgxLQ=="
-                      crossOrigin="anonymous" referrerPolicy="no-referrer"/>
-                <link rel="icon" href="/icon.png" />
-            </Head>
+            <HeadSeo currentURL={router.asPath} description={description ? description : title} pageTitle={title} previewImage={image}/>
+
         <div className='border w-full items-center flex flex-col px-7 lg:px-20'>
             <Modal imgSrc={imgSrc} modal={modal} setModal={setModal}/>
             <div className='w-full sm:w-6/12 relative flex flex-col justify-center'>  
@@ -67,7 +69,7 @@ const ActualityDetails = ({date, image, title, type, description, picturesGalery
                         <GrLinkedinOption className='mb-4'/>
                         <FaTwitter className='mb-4'/>
                     </div>
-                    <p className='pl-8 text-xl' onClick={()=>getList()}>
+                    <p className='pl-8 text-xl'>
                         {description}
                     </p>
                 </div>
@@ -102,7 +104,19 @@ const ActualityDetails = ({date, image, title, type, description, picturesGalery
                     </ul>
                     </>
                 )}
+                {isBlock ? 
+                (
+                    <ul className='mt-36'>
+                        {actualitiesList.map((actuality, index)=>{
+                            return <li key={index}>
+                                        <a className='mt-3 cursor-pointer' onClick={()=>getActuality(actuality.path, actuality.id)}>{actuality.title}</a>
+                                </li>
+                        })}
+                    </ul>
+                ) : <button onClick={()=>getMoreActulities()} className='px-12 py-4 font-light cursor-pointer text-white bg-orange-500 mt-36'>Plus d'actualités</button>}
+                
                 <HeaderAbout/>
+                
 
                 
         </div>

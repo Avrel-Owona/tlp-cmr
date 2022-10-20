@@ -5,7 +5,7 @@ import Head from "next/head";
 import {useRouter} from "next/router";
 
 const HomeLayout = ({children}) => {
-    const {pathname} = useRouter();
+    
     return (
         <>
             <Head>
@@ -17,12 +17,9 @@ const HomeLayout = ({children}) => {
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
                 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;600;700&display=swap" rel="stylesheet"></link>
-                
             </Head>
             <Navbar/>
             <div className='container container-layout flex flex-col justify-center mx-auto'>{children}</div>
-            {pathname === '/contact' ? null : <Footer/>}
-
         </>
     );
 };
