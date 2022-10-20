@@ -63,6 +63,9 @@
     margin-top: -110px;
     z-index: 0;
 }
+.opa {
+    opacity: 92%;
+}
 .slide { 
     position: absolute;
     top: 0;
