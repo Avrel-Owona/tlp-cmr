@@ -67,7 +67,7 @@ const ActualityDetails = ({date, image, title, type, description, picturesGalery
                 <div className='mt-10 flex'>
                     <div className='text-3xl'>
                     <FacebookShareButton
-                        url={router.asPath}
+                        url={`tournonslapagecameroun.org/${router.asPath}`}
                         quote={description}
                         hashtag={"#TournonsLaPageCameroun"}
                     >

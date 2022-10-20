@@ -20,7 +20,7 @@ const HeadSeo = ({pageTitle, description, currentURL, previewImage}) =>{
 
             {/* Open Graph */}
             <meta property="og:type" content='openGraphType' key="ogurl" />
-            <meta property="og:url" content={currentURL} key="ogurl" />
+            <meta property="og:url" content={`tournonslapagecameroun.org/${currentURL}`} key="ogurl" />
             <meta property="og:image" content={previewImage} key="ogimage" />
             <meta property="og:site_name" content='tournonslapagecameroun.org' key="ogsitename" />
             <meta property="og:title" content={pageTitle} key="ogtitle" />
