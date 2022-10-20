@@ -177,7 +177,7 @@ footer div:nth-child(1) {
     margin-top: 4rem;
 }
 .swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.mySwiper.mt-20{
-    padding-bottom: 5rem !important;
+    padding-bottom: 5rem !important; 
 }
 .card-news-slide {
     height: 538px;
