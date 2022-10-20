@@ -20,6 +20,7 @@ const HomeLayout = ({children}) => {
             </Head>
             <Navbar/>
             <div className='container container-layout flex flex-col justify-center mx-auto'>{children}</div>
+            <Footer/>
         </>
     );
 };
