@@ -1,8 +1,8 @@
-import { FacebookIcon, FacebookShareButton } from 'next-share';
+import { FacebookIcon, FacebookShareButton, TwitterIcon, TwitterShareButton, WhatsappIcon, WhatsappShareButton } from 'next-share';
 import Head from 'next/head';
 import Router, { useRouter } from 'next/router';
 import React, {useEffect, useMemo, useState} from 'react';
-import {FaFacebook, FaFilePdf, FaTwitter} from "react-icons/fa";
+import {FaFacebook, FaFilePdf, FaTwitter, FaWhatsapp} from "react-icons/fa";
 import {GrLinkedinOption} from "react-icons/gr";
 import { NewsItemsCards } from '../utils/navItems';
 import HeaderAbout from './HeaderAbout';
@@ -65,16 +65,28 @@ const ActualityDetails = ({date, image, title, type, description, picturesGalery
                 <h1 className='font-semibold text-4xl sm:text-6xl mt-20 text-center border uppercase title'>{title}</h1>
                 <h2 className='mt-20 font-light text-base text-white bg-orange-500 text-center py-6 sm:text-xl'>{date} |<span className='font-bold'> {author ? author : 'TLP CMR'}</span></h2>
                 <div className='mt-10 flex'>
-                    <div className='text-3xl'>
-                    <FacebookShareButton
-                        url={`tournonslapagecameroun.org/${router.asPath}`}
-                        quote={description}
-                        hashtag={"#TournonsLaPageCameroun"}
-                    >
-                        <FacebookIcon size={32} round />
-                    </FacebookShareButton>
-                        <GrLinkedinOption className='mb-4'/>
-                        <FaTwitter className='mb-4'/>
+                    <div className='text-3xl flex-col flex'>
+                        <FacebookShareButton
+                            url={`tournonslapagecameroun.org/${router.asPath}`}
+                            quote={description}
+                            hashtag={"#TournonsLaPageCameroun"}
+                        >
+                            <FaFacebook size={40} round className='mb-4 text-orange-500' />
+                        </FacebookShareButton>
+                        <WhatsappShareButton
+                            url={`tournonslapagecameroun.org/${router.asPath}`}
+                            hashtag={"#TournonsLaPageCameroun"}
+                            separator=":: "
+                        >
+                            <FaWhatsapp size={40} round className='mb-4 text-orange-500'/>
+                        </WhatsappShareButton>
+                        <TwitterShareButton
+                            url={`tournonslapagecameroun.org/${router.asPath}`}
+                            hashtag={"#TournonsLaPageCameroun"}
+                            title={description}
+                        >
+                            <FaTwitter size={40} round className='mb-4 text-orange-500'/>
+                        </TwitterShareButton>
                     </div>
                     <p className='pl-8 text-xl'>
                         {description}
