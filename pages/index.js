@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ActualitiesSlider from "../app/components/ActualitiesSlider";
 import HeaderAbout from "../app/components/HeaderAbout";
 import RegissorCard from "../app/components/RegissorCard";
 import { Slider } from "../app/components/Slider";
@@ -9,14 +10,12 @@ export default function Home() {
   return (
       <>
           <Slider/>
+          <ActualitiesSlider/>
           <div className='flex flex-wrap justify-center sm:px-20 px-7 lg:pt-32 pt-20 mb-32'>
               <div className='w-full text-center lg:text-left sm:w-96 sm:mr-20 flex flex-col justify-center'>
                   <h3 className='text-2xl sm:text-3xl carte-text font-light font-news'>
                       Tournons La Page Cameroun (TLP-CMR) est implanté dans 10 régions, 58 départements, et 361 arrondissements.
                   </h3>
-                  <Link href={'/actualites'}>
-                      <button className='py-3 px-4 text-white bg-orange-600 mt-10'>Actualités</button>
-                  </Link>
               </div>
               <div className='sm:ml-20'>
                   <img src="/carte.png" className='w-96 h-full object-cover z-0' alt=""/>
@@ -29,6 +28,9 @@ export default function Home() {
                 <img src="/afrique.png" className='w-full mt-20 sm:w-96 h-full object-cover z-0' alt=""/>
               </div>
           </div>
+          <div className="sm:px-20 px-7">
+            <HeaderAbout/>
+          </div>
           <div className='sm:px-20 py-20 flex flex-col items-center'>
               <div className="w-full sm:px-0 px-7 lg:w-6/12">
                 <h3 className='carte-text carte-text-after text-center text-4xl font-bold py-20 font-news uppercase'>Nos valeurs</h3>
@@ -37,9 +39,6 @@ export default function Home() {
                     Le respect et la défense des droits humains et des libertés fondamentales, des droits économiques, sociaux et culturels et de l’accès aux ressources nationales,le caractère universel de la démocratie et de la défense des grands principes démocratiquesle rôle central des contre-pouvoirs citoyens et des corps intermédiaires dans la vie politique et sociale,l’égalité des indivis en droit et en opportunités,la solidarité nationale et internationale,l’importance des libertés individuelles et civiques,la transparence de l’action publique et la redevabilité des élus envers les citoyens
                 </p>
               </div>
-          </div>
-          <div className="sm:px-20 px-7">
-            <HeaderAbout/>
           </div>
           <div className='sm:px-20 pt-7 pb-40'>
               <h3 className='carte-text carte-text-after text-center text-4xl font-bold py-36 font-news uppercase'>Les regisseurs</h3>

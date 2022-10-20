@@ -66,6 +66,21 @@
 .opa {
     opacity: 92%;
 }
+.swiper-button-next {
+    color: #f97316 !important;
+}
+.swiper-pagination-bullet-active {
+    background: #f97316 !important;
+}
+.swiper-button-next.swiper-button-disabled {
+    color: #f97316  !important;
+}
+.swiper-button-prev.swiper-button-disabled {
+    color: #f97316 !important;
+}
+.swiper-button-prev {
+    color: #f97316 !important;
+}
 .slide { 
     position: absolute;
     top: 0;
@@ -161,6 +176,14 @@ footer div:nth-child(1) {
     position: relative;
     margin-top: 4rem;
 }
+.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.mySwiper.mt-20{
+    padding-bottom: 5rem !important;
+}
+.card-news-slide {
+    height: 538px;
+    width: 100%;
+    position: relative;
+}
 .date-card-news {
     font-size: 13px;
     color: #ffffff69;
@@ -191,6 +214,9 @@ footer div:nth-child(1) {
     }
     .card-news {
         margin: 4rem 1rem;
+        margin-top: 0;
+    }
+    .card-news-slide {
         margin-top: 0;
     }
     footer div:nth-child(1) {
