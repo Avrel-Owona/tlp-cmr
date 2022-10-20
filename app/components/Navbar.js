@@ -90,6 +90,7 @@ export const Navbar = () => {
                             <button
                                 className={`flex items-center text-4xl font-thin justify-center focus:outline-none ${pathname === '/' ? (bgColor === 'bg-transparent' ? 'text-white' : 'text-black') : 'text-black'} focus:ring-offset-2 focus:ring-white`}
                                 onClick={() => setIsOpen(!isOpen)}
+                                name={'burger'}
                             >
                                 <GoThreeBars/>      
                             </button>
@@ -104,6 +105,7 @@ export const Navbar = () => {
                             <button
                                     className='text-black flex items-center justify-center focus:outline-none focus:ring-offset-2 focus:ring-white text-4xl z-10 absolute top-8 right-10%'
                                     onClick={() => setIsOpen(!isOpen)}
+                                    name={'burger'}
                                 >
 
                                     <AiOutlineClose/>

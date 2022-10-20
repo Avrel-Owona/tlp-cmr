@@ -8,7 +8,7 @@ const PageHeader = ({title, cover}) => {
                     {/*<p className='pt-10 w-10/12 lg:w-4/12 text-white text-xl font-light text-center lg:text-left'>Tournons La Page est un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne.</p>*/}
                 </div>
                 <div className='h-full w-full bg-black opacity-50 absolute border-red-500 top-0'></div>
-                <img src={cover} className='w-full h-full object-cover z-0' alt=""/>
+                <img src={cover} className='w-full h-full object-cover z-0' alt="cover-img"/>
                 {/*<img src="/resis.jpg" className='w-full h-full object-cover z-0' alt=""/>*/}
             </div>
     )

@@ -15,7 +15,7 @@ const TlpTv = () => {
                     {/*<p className='pt-10 w-10/12 lg:w-4/12 text-white text-xl font-light text-center lg:text-left'>Tournons La Page est un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne.</p>*/}
                 </div>
                 <div className='h-full w-full bg-black opacity-50 absolute top-0 border-red-50'></div>
-                <img src="/groupe.jpeg" className='w-full h-full object-cover z-0' alt=""/>
+                <img src="/groupe.jpeg" className='w-full h-full object-cover z-0' alt="groupe"/>
                 {/*<img src="/resis.jpg" className='w-full h-full object-cover z-0' alt=""/>*/}
             </div>
         </>

@@ -8,7 +8,7 @@ const Modal = ({modal, setModal, imgSrc}) => {
                 <button className='border justify-center items-center flex fixed text-white text-2xl top-10 right-10 cursor-pointer' onClick={()=>setModal(false)}>
                     <AiOutlineClose/> 
                 </button>
-                <img className='h-auto max-h-full w-auto max-w-full py-10' src={imgSrc} alt=""/>
+                <img className='h-auto max-h-full w-auto max-w-full py-10' src={imgSrc} alt="current-img"/>
             </div>
     )
 }

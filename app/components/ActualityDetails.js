@@ -58,7 +58,7 @@ const ActualityDetails = ({date, image, title, type, description, picturesGalery
         <div className='border w-full items-center flex flex-col px-7 lg:px-20'>
             <Modal imgSrc={imgSrc} modal={modal} setModal={setModal}/>
             <div className='w-full sm:w-6/12 relative flex flex-col justify-center'>  
-                <img src={image} alt=""/>
+                <img src={image} alt="previewImage"/>
                 <h1 className='font-light text-base sm:text-3xl bg-orange-500 text-white text-center py-4 px-12 left-[-15%] bottom-[10%] sm:absolute shadow-lg font-news'>{type}</h1>
             </div>
             <div className='sm:w-6/12'>
@@ -102,7 +102,7 @@ const ActualityDetails = ({date, image, title, type, description, picturesGalery
                             {pictures.map((img, index)=> {
                                 return (
                                     <div className='pics cursor-pointer mb-4' key={index} onClick={()=>getImg(img.imgSrc)}>
-                                        <img className='w-full border' src={img.imgSrc} alt=""/>
+                                        <img className='w-full border' src={img.imgSrc} alt="pictures"/>
                                     </div>
                                 )
                             })}

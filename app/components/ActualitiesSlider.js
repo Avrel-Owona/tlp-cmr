@@ -12,6 +12,7 @@ import { FiPlay, FiArrowRight } from "react-icons/fi";
 import { NewsItemsCards } from "../utils/navItems";
 import Router from 'next/router';
 import Link from "next/link";
+import Image from "next/image";
 
 const ActualitiesSlider = () => {
     const getActuality = (path,id) => {
@@ -21,7 +22,7 @@ const ActualitiesSlider = () => {
         })
     }
     return (
-        <section className="py-28 bg-gray-100">
+        <section className="pt-28 pb-10 lg:py-28 bg-gray-100">
             <div>
                 <div className="flex items-center sm:justify-between px-7 lg:px-20 justify-center lg:pl-36 flex-wrap">
                     <h1 className="text-3xl sm:text-6xl font-news text-orange-500 hidden sm:block">Actualités</h1>
@@ -68,7 +69,7 @@ const ActualitiesSlider = () => {
                         
                             <div key={index} className='border-0.5 mr-7'>
                                 <SwiperSlide>
-                                    <img src={actuality.cover} className='h-full w-full object-cover card-news-slide'/>
+                                    <Image width={'100%'} height={'100%'} src={actuality.cover} className='h-full w-full object-cover card-news-slide' alt="img-cover"/>
                                     <div className='flex items-end bg-card-news absolute top-0 w-full h-full'>
                                                 <div className='flex flex-col justify-between p-8 text-white w-full'>
                                                     <h3 className='bg-orange-500 absolute top-0 right-0 h-9 text-sm flex items-center text-white justify-center font-light px-12 uppercase'>{actuality.type}</h3>
@@ -77,7 +78,7 @@ const ActualitiesSlider = () => {
                                                         {actuality.title}
                                                         </h3>
                                                         <div className='flex items-baseline justify-between'>
-                                                            <a onClick={()=>getActuality(actuality.path, actuality.id)} className='flex items-center mt-8 font-extralight cursor-pointer'>Lire <FiArrowRight className='text-2xl pl-3 text-orange-500'/></a>
+                                                            <button name="details" onClick={()=>getActuality(actuality.path, actuality.id)} className='flex items-center mt-8 font-extralight cursor-pointer'>Lire <FiArrowRight className='text-2xl pl-3 text-orange-500'/></button>
                                                             <span className='date-card-news'>{actuality.date}</span>
                                                         </div>
                                                     </>

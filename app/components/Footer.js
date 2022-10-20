@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className='py-14 text-sm text-center text-white px-32 mt-32'>
             <div className='flex flex-wrap w-full justify-center'>
-                <Link href={'/'}><img className='logo' src='/icon-navbar.png'/></Link>
+                <Link href={'/'}><img className='logo' src='/icon-navbar.png' alt='logo-footer'/></Link>
                 <div className='social-wrapper-footer justify-between flex text-black w-36 mt-12 items-center'>
                         <a href=''><FaFacebook className={'hover:text-gray-600 cursor-pointer'}/></a>
                         <a href={'#'}><FaTwitter className={'ml-5 hover:text-gray-600 cursor-pointer'}/></a>

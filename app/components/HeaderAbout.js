@@ -11,7 +11,7 @@ const HeaderAbout = () => {
                     <p className="font-thin mt-6 xl:text-start text-center">Nous sommes un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne.</p>
                 </div>
                 <div className="w-full xl:w-6/12 h-96">
-                    <img src="/header.png" className="h-full w-full object-cover"/>
+                    <img src="/header.png" className="h-full w-full object-cover" alt="cover-header"/>
                 </div>
             </div>
         </div>

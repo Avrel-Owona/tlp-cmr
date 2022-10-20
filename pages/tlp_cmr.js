@@ -32,7 +32,7 @@ const TlpCmr = () => {
               <div className="w-full sm:px-0 px-7 lg:w-11/12 xl:w-8/12 flex flex-col items-center">
                 <h1 className='font-bold text-3xl sm:text-4xl text-center text-gray-800 carte-text carte-text-after font-news uppercase'>Mouvement Tournons La Page</h1>
                 <p className='mt-20 text-center w-full sm:w-9/12 text-xl text-gray-500 font-light'>Tournons La Page est un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne. Il s’agit d’une alliance non-partisane et pacifique de 200 organisations de défense des droits humains, de mouvements de jeunes, de syndicats, d’associations non confessionnelles, d’intellectuels et d’artistes regroupés en dix coalitions nationales : Burundi, Cameroun, Congo, Côte-d’Ivoire, Gabon, Guinée, Niger, République Démocratique du Congo, Tchad et Togo ainsi qu’une coalition européenne. La coordination internationale de TLP est basée à Paris.</p>
-                <img src="/afrique.png" className='w-full mt-20 sm:w-96 h-full object-cover z-0' alt=""/>
+                <img src="/afrique.png" className='w-full mt-20 sm:w-96 h-full object-cover z-0' alt="afrique"/>
               </div>
           </div>
             {/* <div className='sm:px-20 pt-7 pb-40'>
@@ -58,7 +58,7 @@ const TlpCmr = () => {
                     {ImagesItems.map((img, index)=> {
                         return (
                             <div className='pics cursor-pointer mb-4' key={index} onClick={()=>getImg(img.ImgSrc)}>
-                                <img className='w-full border' src={img.ImgSrc} alt=""/>
+                                <img className='w-full border' src={img.ImgSrc} alt="picture"/>
                             </div>
                         )
                     })}
