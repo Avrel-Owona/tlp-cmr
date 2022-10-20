@@ -16,7 +16,7 @@ const Slug = () => {
     let slugDetails = actualityDetails[slug - 1]
     
 
-    return <ActualityDetails id={slugDetails?.id} date={slugDetails?.date} image={slugDetails?.cover} title={slugDetails?.title} type={slugDetails?.type} description={slugDetails?.description} picturesGalery={slugDetails?.picturesGalery} pictures={slugDetails?.pictures} author={slugDetails?.author} documentPDF={slugDetails?.documentPDF} documents={slugDetails?.documents}/>
+    return <ActualityDetails id={slugDetails?.id} date={slugDetails?.date} image={slugDetails?.cover} title={slugDetails?.title} type={slugDetails?.type} description={slugDetails?.description} picturesGalery={slugDetails?.picturesGalery} pictures={slugDetails?.pictures} videosGalery={slugDetails?.videosGalery} videos={slugDetails?.videos} author={slugDetails?.author} documentPDF={slugDetails?.documentPDF} documents={slugDetails?.documents}/>
 }
 
 export default Slug

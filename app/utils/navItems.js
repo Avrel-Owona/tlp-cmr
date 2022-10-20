@@ -176,6 +176,10 @@ export const NewsItemsCards = [
         cover : "/liberez_oumar_etibrahima/PHOTO-2022-09-26-16-30-13.jpg",
         path : "liberez_oumar_et_ibrahima",
         date : "26 Septembre 2022",
+        videosGalery : true,
+        videos : [
+            {videoSrc : '/liberez_oumar_etibrahima/VIDEO-2022-09-26-16-29-52.mp4'},
+        ],
         picturesGalery : true,
         pictures : [
             {imgSrc : "/liberez_oumar_etibrahima/PHOTO-2022-09-26-16-30-13.jpg"},
@@ -190,6 +194,10 @@ export const NewsItemsCards = [
         cover : "/rencontre_avec_les_osc_ngaoundere/PHOTO-2022-09-22-15-06-00.jpg",
         date : "22 Septembre 2022",
         picturesGalery : true,
+        videosGalery : true,
+        videos : [
+            {videoSrc : '/rencontre_avec_les_osc_ngaoundere/VIDEO-2022-09-22-15-11-15.mp4'},
+        ],
         pictures : [
             {imgSrc : "/rencontre_avec_les_osc_ngaoundere/PHOTO-2022-09-22-15-05-55.jpg"},
             {imgSrc : "/rencontre_avec_les_osc_ngaoundere/PHOTO-2022-09-22-15-06-04.jpg"},
@@ -405,7 +413,10 @@ export const NewsItemsCards = [
         picturesGalery : true,
         pictures : [
             {imgSrc : '/arrestation_des_leaders_amerounais/arrestation_bikoko_jean_marc.png'},
-
+        ],
+        videosGalery : true,
+        videos : [
+            {videoSrc : '/arrestation_des_leaders_amerounais/arrestation.mp4'},
         ],
         documents : true,
         documentPDF : [
@@ -423,6 +434,10 @@ export const NewsItemsCards = [
         date : "15 Septembre 2015",
         path : "jean_marc_bikoko_arrete",
         author : 'Mathieu Olivier',
+        videosGalery : true,
+        videos : [
+            {videoSrc : '/arrestation_des_leaders_amerounais/arrestation.mp4'},
+        ],
         description : "Arrêté mardi 15 septembre au Palais des Sports de Yaoundé en compagnie de cinq autres personnes, dont le journaliste François Fogno Fotso, Jean-Marc Bikoko avait été emmené au commissariat central de Yaoundé, en fin de matinée mercredi 16 septembre, afin d’y être interrogé sur le colloque auquel il participait. Selon Emmanuel Edou, avocat de Jean-Marc Bikoko, contacté par Jeune Afrique, les policiers lui ont ensuite signifié en fin d’après-midi qu’il faisait l’objet d’une garde à vue de quinze jours, renouvelable une fois sur décret du gouverneur du Centre. Si son avocat espère encore obtenir une libération, l’activiste devrait donc rester au minimum deux semaines de plus en détention. Ce cas de figure est relativement rare dans la législation camerounaise puisque, selon son avocat, une telle durée de garde à vue n’existe que dans le cadre de la nouvelle loi anti-terroriste et dans celui de la loi sur le maintien de l’ordre de 1990. Défaut d’autorisation ? Point focal national du Réseau dynamique citoyenne, coordinateur de la Plateforme d’information et d’action sur la dette du Cameroun, président confédéral de la Centrale syndicale du secteur public (CSP), Jean-Marc Bikoko prenait part, au moment de son arrestation, à un « atelier de lancement de la campagne ‘Tournons La Page’ au Cameroun », ayant pour thème « gouvernance électorale et alternance démocratique » et organisé à l’occasion de la célébration de la Journée internationale de la démocratie. « Le sous-préfet est venu au Palais des Sports pour leur interdire le colloque et les policiers ont aussi investi les lieux », explique Emmanuel Edou. Interpellant six personnes, ils les auraient notamment dépouillés de leur t-shirt, sur lesquels était inscrit un slogan pour l’alternance démocratique au Cameroun. Les forces de l’ordre estiment que Jean-Marc Bikoko et son organisation n’avait pas obtenu l’autorisation de tenir cet événements. L’intéressé a quant à lui répondu aux enquêteurs que, ne s’agissant pas d’une manifestation mais d’un colloque, il avait estimé ne pas avoir besoin d’un tel sésame des autorités, d’autant plus que le Palais des Sports avait été loué. La campagne pour l’alternance organisée par le Réseau dynamique citoyenne est censé se poursuivre jusqu’en 2018, année au cours de laquelle le pays organisera les élections municipales, législatives, sénatoriales, régionales et présidentielle.",
     },
     {
