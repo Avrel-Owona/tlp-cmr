@@ -37,7 +37,7 @@ const ActualityCard = ({posts, postsPerPage, totalPosts, paginate, currentPage})
                 {posts.map((actuality, index)=>{
                     return (
                         <div key={index} className='card-news border'>
-                            <Image width={'100%'} height={'100%'} src={actuality.cover} className='h-full w-full object-cover' alt='actuality-cover'/>
+                            <img src={actuality.cover} className='h-full w-full object-cover' alt='actuality-cover'/>
                             <div className='flex items-end bg-card-news absolute top-0 w-full h-full'>
                                         <div className='flex flex-col justify-between p-8 text-white w-full'>
                                             <h3 className='bg-orange-500 absolute top-0 right-0 h-9 text-sm flex items-center text-white justify-center font-light px-12 uppercase'>{actuality.type}</h3>

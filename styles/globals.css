@@ -178,6 +178,8 @@ footer div:nth-child(1) {
 }
 .swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.mySwiper.mt-20{
     padding-bottom: 5rem !important; 
+    padding-left: 1.75rem !important;
+    padding-right: 1.75rem !important;
 }
 .card-news-slide {
     height: 538px;
@@ -206,6 +208,10 @@ footer div:nth-child(1) {
     }
 }
 @media screen and (min-width: 576px){
+    .swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.mySwiper.mt-20{ 
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
     .logo {
         width: 10rem;
     }

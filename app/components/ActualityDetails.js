@@ -1,6 +1,7 @@
 import { FacebookIcon, FacebookShareButton, TwitterIcon, TwitterShareButton, WhatsappIcon, WhatsappShareButton } from 'next-share';
 import Head from 'next/head';
 import Router, { useRouter } from 'next/router';
+import { stringify } from 'postcss';
 import React, {useEffect, useMemo, useState} from 'react';
 import {FaFacebook, FaFilePdf, FaTwitter, FaWhatsapp} from "react-icons/fa";
 import {GrLinkedinOption} from "react-icons/gr";
@@ -11,8 +12,10 @@ import Modal from './Modal';
 
 
 const ActualityDetails = ({date, image, title, type, description, picturesGalery, pictures, author, documents, documentPDF, id}) => {
-    
 
+
+    
+    console.log('description', )
     const [actualitiesList, setActualitiesList] = useState(NewsItemsCards)
     const [isBlock, setIsBlock] = useState(false)
     const [modal, setModal] = useState(false)
@@ -53,19 +56,19 @@ const ActualityDetails = ({date, image, title, type, description, picturesGalery
 
     return (
         <>
-            <HeadSeo currentURL={router.asPath} description={description ? description : title} pageTitle={title} previewImage={image}/>
+            <HeadSeo currentURL={String(router.asPath)} description={String(description ? description : title)} pageTitle={String(title)} previewImage={String(image)}/>
 
         <div className='border w-full items-center flex flex-col px-7 lg:px-20'>
             <Modal imgSrc={imgSrc} modal={modal} setModal={setModal}/>
-            <div className='w-full sm:w-6/12 relative flex flex-col justify-center'>  
+            <div className='w-full sm:w-8/12 lg:w-10/12 xl:w-6/12 relative flex flex-col justify-center'>  
                 <img src={image} alt="previewImage"/>
                 <h1 className='font-light text-base sm:text-3xl bg-orange-500 text-white text-center py-4 px-12 left-[-15%] bottom-[10%] sm:absolute shadow-lg font-news'>{type}</h1>
             </div>
-            <div className='sm:w-6/12'>
+            <div className='sm:w-8/12 lg:w-10/12 xl:w-6/12'>
                 <h1 className='font-semibold text-4xl sm:text-6xl mt-20 text-center border uppercase title'>{title}</h1>
                 <h2 className='mt-20 font-light text-base text-white bg-orange-500 text-center py-6 sm:text-xl'>{date} |<span className='font-bold'> {author ? author : 'TLP CMR'}</span></h2>
                 <div className='mt-10 flex'>
-                    <div className='text-3xl flex-col flex'>
+                    <div className='text-3xl flex-col flex h-full sticky top-24'>
                         <FacebookShareButton
                             url={`tournonslapagecameroun.org${router.asPath}`}
                             quote={description}

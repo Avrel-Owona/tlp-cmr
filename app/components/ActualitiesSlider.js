@@ -62,7 +62,7 @@ const ActualitiesSlider = () => {
                 }}
                 navigation={true}
                 modules={[Pagination, Navigation]}
-                className="mySwiper mt-20"
+                className="mySwiper mt-20 px-7"
             >
                 {NewsItemsCards.map((actuality, index)=>{
                     return (
