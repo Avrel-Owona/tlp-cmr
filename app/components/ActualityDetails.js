@@ -1,20 +1,20 @@
-import { FacebookIcon, FacebookShareButton, TwitterIcon, TwitterShareButton, WhatsappIcon, WhatsappShareButton } from 'next-share';
-import Head from 'next/head';
+import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'next-share';
 import Router, { useRouter } from 'next/router';
-import { stringify } from 'postcss';
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useState} from 'react';
 import {FaFacebook, FaFilePdf, FaTwitter, FaWhatsapp} from "react-icons/fa";
-import {GrLinkedinOption} from "react-icons/gr";
 import { NewsItemsCards } from '../utils/navItems';
 import HeaderAbout from './HeaderAbout';
 import HeadSeo from './HeadSeo';
 import Modal from './Modal';
 
 
-const ActualityDetails = ({date, image, title, type, description, picturesGalery, pictures, author, documents, documentPDF, id}) => {
 
 
-    
+
+
+const ActualityDetails = ({date, image, title, type, description, videosGalery, videos, picturesGalery, pictures, author, documents, documentPDF, id}) => {
+
+
     console.log('description', )
     const [actualitiesList, setActualitiesList] = useState(NewsItemsCards)
     const [isBlock, setIsBlock] = useState(false)
@@ -104,11 +104,22 @@ const ActualityDetails = ({date, image, title, type, description, picturesGalery
                         <div className='columns-1 sm:columns-2 lg:columns-3 gallerie'>
                             {pictures.map((img, index)=> {
                                 return (
-                                    <div className='pics cursor-pointer mb-4' key={index} onClick={()=>getImg(img.imgSrc)}>
-                                        <img className='w-full border' src={img.imgSrc} alt="pictures"/>
-                                    </div>
+                                    <>
+                                        <div className='pics cursor-pointer mb-4' key={index} onClick={()=>getImg(img.imgSrc)}>
+                                            <img className='w-full border' src={img.imgSrc} alt="pictures"/>
+                                        </div>
+                                    </>
                                 )
                             })}
+                            { videosGalery && (
+                                            videos.map((video, index)=>{
+                                                return (
+                                                    <div key={index} className='pics cursor-pointer mb-4'>
+                                                        <video controls src={video.videoSrc}/>
+                                                    </div>
+                                                )
+                                })
+                            )}
                         </div>
                     </div>
                 )} 
@@ -126,6 +137,9 @@ const ActualityDetails = ({date, image, title, type, description, picturesGalery
                     </ul>
                     </>
                 )}
+                 <div>
+                    <HeaderAbout />
+                </div>
                 {/* {isBlock ? 
                 (
                     <ul className='mt-36'>
@@ -137,7 +151,7 @@ const ActualityDetails = ({date, image, title, type, description, picturesGalery
                     </ul>
                 ) : <button onClick={()=>getMoreActulities()} className='px-12 py-4 font-light cursor-pointer text-white bg-orange-500 mt-36'>Plus d'actualités</button>} */}
                 
-                <HeaderAbout/>
+
                 
 
                 
