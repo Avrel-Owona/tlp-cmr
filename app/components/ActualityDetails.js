@@ -1,3 +1,4 @@
+import { FacebookIcon, FacebookShareButton } from 'next-share';
 import Head from 'next/head';
 import Router, { useRouter } from 'next/router';
 import React, {useEffect, useMemo, useState} from 'react';
@@ -65,7 +66,13 @@ const ActualityDetails = ({date, image, title, type, description, picturesGalery
                 <h2 className='mt-20 font-light text-base text-white bg-orange-500 text-center py-6 sm:text-xl'>{date} |<span className='font-bold'> {author ? author : 'TLP CMR'}</span></h2>
                 <div className='mt-10 flex'>
                     <div className='text-3xl'>
-                        <FaFacebook className='mb-4'/>
+                    <FacebookShareButton
+                        url={router.asPath}
+                        quote={description}
+                        hashtag={"#TournonsLaPageCameroun"}
+                    >
+                        <FacebookIcon size={32} round />
+                    </FacebookShareButton>
                         <GrLinkedinOption className='mb-4'/>
                         <FaTwitter className='mb-4'/>
                     </div>

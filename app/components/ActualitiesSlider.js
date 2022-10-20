@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import { FiPlay, FiArrowRight } from "react-icons/fi";
 import { NewsItemsCards } from "../utils/navItems";
+import Router from 'next/router';
 import Link from "next/link";
 
 const ActualitiesSlider = () => {
