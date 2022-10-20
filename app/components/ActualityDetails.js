@@ -123,7 +123,7 @@ const ActualityDetails = ({date, image, title, type, description, picturesGalery
                     </ul>
                     </>
                 )}
-                {isBlock ? 
+                {/* {isBlock ? 
                 (
                     <ul className='mt-36'>
                         {actualitiesList.map((actuality, index)=>{
@@ -132,7 +132,7 @@ const ActualityDetails = ({date, image, title, type, description, picturesGalery
                                 </li>
                         })}
                     </ul>
-                ) : <button onClick={()=>getMoreActulities()} className='px-12 py-4 font-light cursor-pointer text-white bg-orange-500 mt-36'>Plus d'actualités</button>}
+                ) : <button onClick={()=>getMoreActulities()} className='px-12 py-4 font-light cursor-pointer text-white bg-orange-500 mt-36'>Plus d'actualités</button>} */}
                 
                 <HeaderAbout/>
                 
