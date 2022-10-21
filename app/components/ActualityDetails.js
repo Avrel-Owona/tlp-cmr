@@ -98,7 +98,7 @@ const ActualityDetails = ({date, image, title, type, description, videosGalery, 
             </div>
             
                 
-                {picturesGalery && (
+                { (picturesGalery || picturesGalery) && (
                     <div className='sm:px-20 pt-7'>
                         <h3 className='carte-text carte-text-after text-center text-4xl font-bold py-36 uppercase'>Quelques medias</h3>
                         <div className='columns-1 sm:columns-2 lg:columns-3 gallerie'>
@@ -111,15 +111,16 @@ const ActualityDetails = ({date, image, title, type, description, videosGalery, 
                                     </>
                                 )
                             })}
-                            { videosGalery && (
-                                            videos.map((video, index)=>{
-                                                return (
-                                                    <div key={index} className='pics cursor-pointer mb-4'>
-                                                        <video controls src={video.videoSrc}/>
-                                                    </div>
-                                                )
+                            
+                            { 
+                                videos.map((video, index)=>{
+                                    return (
+                                        <div key={index} className='pics cursor-pointer mb-4'>
+                                            <video controls src={video.videoSrc}/>
+                                        </div>
+                                    )
                                 })
-                            )}
+                            }
                         </div>
                     </div>
                 )} 
