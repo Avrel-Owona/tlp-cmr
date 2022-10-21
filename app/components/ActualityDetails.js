@@ -62,7 +62,7 @@ const ActualityDetails = ({date, image, title, type, description, videosGalery, 
             <Modal imgSrc={imgSrc} modal={modal} setModal={setModal}/>
             <div className='w-full sm:w-8/12 lg:w-10/12 xl:w-6/12 relative flex flex-col justify-center'>  
                 <img src={image} alt="previewImage"/>
-                <h1 className='font-light text-base sm:text-3xl bg-orange-500 text-white text-center py-4 px-12 left-[-15%] bottom-[10%] sm:absolute shadow-lg font-news'>{type}</h1>
+                <h1 className='font-light text-lg sm:text-3xl bg-orange-500 text-white text-center py-4 px-12 left-[-15%] bottom-[10%] sm:absolute shadow-lg title-head'>{type}</h1>
             </div>
             <div className='sm:w-8/12 lg:w-10/12 xl:w-6/12'>
                 <h1 className='font-semibold text-4xl sm:text-6xl mt-20 text-center uppercase title-details'>{title}</h1>

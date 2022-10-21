@@ -219,6 +219,9 @@ a:hover {
         font-family: 'Oswald', sans-serif;
         line-height: 5rem !important;
     }
+    .title-head {
+        font-family: 'Oswald', sans-serif;
+    }
 }
 @media screen and (min-width: 576px){
     .swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.mySwiper.mt-20{ 
