@@ -28,9 +28,7 @@ export default function Home() {
                 <img src="/afrique.png" className='w-full mt-20 sm:w-96 h-full object-cover z-0' alt="afrique"/>
               </div>
           </section>
-          <section className="sm:px-20 px-7">
-            <HeaderAbout/>
-          </section>
+          <HeaderAbout/>
           <section className='sm:px-20 py-20 flex flex-col items-center'>
               <div className="w-full sm:px-0 px-7 lg:w-6/12">
                 <h3 className='carte-text carte-text-after text-center text-4xl font-bold py-20 font-news uppercase'>Nos valeurs</h3>

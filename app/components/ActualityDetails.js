@@ -137,9 +137,7 @@ const ActualityDetails = ({date, image, title, type, description, videosGalery, 
                     </ul>
                     </>
                 )}
-                 <div>
-                    <HeaderAbout />
-                </div>
+                <HeaderAbout />
                 {/* {isBlock ? 
                 (
                     <ul className='mt-36'>

@@ -16,9 +16,7 @@ const Index = () => {
             <div className='w-screen relative bg-no-repeat bg-center'>
                 <PageHeader cover={"groupe.jpeg"} title={'actualités'}/>
                 <SectionCardsNews/>
-                <div className="sm:px-20 px-7">
-                    <HeaderAbout/>
-                </div>
+                <HeaderAbout />
             </div>
        </>
     );
