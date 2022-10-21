@@ -33,10 +33,10 @@ const ActualityCard = ({posts, postsPerPage, totalPosts, paginate, currentPage})
 
     return (
         <section className='flex flex-col items-center'>
-                <div className='flex flex-wrap justify-center px-2 sm:px-3 sm:mt-40 border w-full'>
+                <div className='flex flex-wrap justify-center px-2 sm:px-3 sm:mt-40 w-full'>
                 {posts.map((actuality, index)=>{
                     return (
-                        <div key={index} className='card-news border'>
+                        <div key={index} className='card-news'>
                             <img src={actuality.cover} className='h-full w-full object-cover' alt='actuality-cover'/>
                             <div className='flex items-end bg-card-news absolute top-0 w-full h-full'>
                                         <div className='flex flex-col justify-between p-8 text-white w-full'>

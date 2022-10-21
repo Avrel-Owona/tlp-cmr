@@ -15,9 +15,9 @@
 .font-news {
     font-family: 'Oswald', sans-serif;
 }
-.title {
+.title-details {
     font-family: 'Oswald', sans-serif;
-    line-height: 3.5rem;
+    line-height: 5rem !important;
 }
 .contact {
     position: absolute;
@@ -201,6 +201,14 @@ footer div:nth-child(1) {
     background: #8080800d;
     justify-content: center;
 }
+a > svg:hover {
+    color: unset !important;
+    text-decoration: unset;
+}
+a:hover {
+    color: #f97316;
+    text-decoration: unset;
+}
 @media screen and (min-width : 600px) {
     .slide .img {
         width: 100%;
@@ -241,4 +249,20 @@ footer div:nth-child(1) {
         line-height: 68px;
     }
 }
+@media (min-width: 1024px){
+    .title {
+        text-align: left !important;
+        line-height: 1 !important;
+    }
+    .subtitle {
+        text-align: left !important;
+    }
+}
+
+@media (min-width: 1280px){
+    .title {
+        font-size: 6rem !important;
+    }
+}
+
 

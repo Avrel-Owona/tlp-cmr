@@ -58,14 +58,14 @@ const ActualityDetails = ({date, image, title, type, description, videosGalery, 
         <>
             <HeadSeo currentURL={String(router.asPath)} description={String(description ? description : title)} pageTitle={String(title)} previewImage={String(image)}/>
 
-        <div className='border w-full items-center flex flex-col px-7 lg:px-20'>
+        <div className='w-full items-center flex flex-col px-7 lg:px-20'>
             <Modal imgSrc={imgSrc} modal={modal} setModal={setModal}/>
             <div className='w-full sm:w-8/12 lg:w-10/12 xl:w-6/12 relative flex flex-col justify-center'>  
                 <img src={image} alt="previewImage"/>
                 <h1 className='font-light text-base sm:text-3xl bg-orange-500 text-white text-center py-4 px-12 left-[-15%] bottom-[10%] sm:absolute shadow-lg font-news'>{type}</h1>
             </div>
             <div className='sm:w-8/12 lg:w-10/12 xl:w-6/12'>
-                <h1 className='font-semibold text-4xl sm:text-6xl mt-20 text-center border uppercase title'>{title}</h1>
+                <h1 className='font-semibold text-4xl sm:text-6xl mt-20 text-center uppercase title-details'>{title}</h1>
                 <h2 className='mt-20 font-light text-base text-white bg-orange-500 text-center py-6 sm:text-xl'>{date} |<span className='font-bold'> {author ? author : 'TLP CMR'}</span></h2>
                 <div className='mt-10 flex'>
                     <div className='text-3xl flex-col flex h-full sticky top-24'>
@@ -106,7 +106,7 @@ const ActualityDetails = ({date, image, title, type, description, videosGalery, 
                                 return (
                                     <>
                                         <div className='pics cursor-pointer mb-4' key={index} onClick={()=>getImg(img.imgSrc)}>
-                                            <img className='w-full border' src={img.imgSrc} alt="pictures"/>
+                                            <img className='w-full' src={img.imgSrc} alt="pictures"/>
                                         </div>
                                     </>
                                 )
@@ -126,7 +126,7 @@ const ActualityDetails = ({date, image, title, type, description, videosGalery, 
                 {documents && (
                     <>
                         <h1 className='uppercase text-start w-full text-2xl sm:text-5xl mt-32 sm:mt-60'>Documents à télécharger</h1>
-                        <ul className='border-black w-full flex mt-4 sm:mt-8 flex-col items-start'>
+                        <ul className='w-full flex mt-4 sm:mt-8 flex-col items-start'>
                         {documentPDF.map((doc, index)=>{
                             return (
                                 <li key={index}>

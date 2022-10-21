@@ -24,7 +24,7 @@ const HomeLayout = ({children}) => {
             </Head>
             <HeadSeo currentURL={router.asPath} description={'Nous sommes un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne.'} pageTitle={'Acceuil'} previewImage={'/groupe.jpeg'}/>
             <Navbar/>
-            <div className='container container-layout flex flex-col justify-center mx-auto'>{children}</div>
+            <div className='container-layout flex flex-col justify-center mx-auto'>{children}</div>
             <Footer/>
         </>
     );

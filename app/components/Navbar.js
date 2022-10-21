@@ -47,9 +47,9 @@ export const Navbar = () => {
                     <a href="#" className='flex items-center text-gray-200 text-sm cursor-pointer ml-4'><MdLocationOn className='mr-2 text-lg svg-nav'/> <span className='hidden sm:block'>Mvog-Ada face mobil</span></a>
                 </div>
                 <div className='flex h-full items-center mt-2 text-lg text-white'>
-                    <a href={'https://www.facebook.com/tournonslapagecameroun'} target='_blank'><FaFacebook className={'hover:text-gray-600 cursor-pointer svg-nav'}/></a>
-                    <a href={'#'}><FaTwitter className={'ml-5 hover:text-gray-600 cursor-pointer svg-nav'}/></a>
-                    <a href={'#'}><FaYoutube className={'ml-5 hover:text-gray-600 cursor-pointer svg-nav'}/></a>
+                    <a href={'https://www.facebook.com/tournonslapagecameroun'} className='hover:text-gray-600 cursor-pointer' target='_blank'><FaFacebook className={'svg-nav'}/></a>
+                    <a href={'#'} className='ml-4 hover:text-gray-600 cursor-pointer'><FaTwitter className={'svg-nav'}/></a>
+                    <a href={'#'} className='ml-4 hover:text-gray-600 cursor-pointer'><FaYoutube className={'svg-nav'}/></a>
                 </div>
             </div>
                 <>
@@ -63,7 +63,7 @@ export const Navbar = () => {
                             </Link>
                         </div>
                         <div className='hidden lg:block relative'>
-                            <ul className='ml-10 flex items-baseline'>
+                            <ul className='flex items-baseline'>
                                 {NavItems.map((item, index)=>{
                                     // if (item.title === 'Régions') {
                                     //     return (
@@ -79,7 +79,7 @@ export const Navbar = () => {
                                     // }
                                     return (
                                         <ActiveLink key={index} activeClassName="font-semibold text-orange-500 l border-b-2 border-orange-600" href={item.path}>
-                                            <li className='cursor-pointer font-sans mx-5 py-2 text-sm'>{item.title}</li>
+                                            <li className='cursor-pointer font-sans mx-3 py-2 text-sm'>{item.title}</li>
                                         </ActiveLink>
                                     )
                                 })}
