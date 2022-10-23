@@ -3,12 +3,12 @@ import Head from "next/head"
 
 
 const HeadSeo = ({pageTitle, description, currentURL, previewImage}) =>{
-    console.log('infos', {
-        pageTitle : pageTitle,
-        description : description,
-        currentURL : currentURL,
-        previewImage : previewImage
-    })
+    // console.log('infos', {
+    //     pageTitle : pageTitle,
+    //     description : description,
+    //     currentURL : currentURL,
+    //     previewImage : previewImage
+    // })
 
     return (
         <Head>
