@@ -147,6 +147,48 @@ export const FooterItems = [
 export const NewsItemsCards = [
     {
         id : 1,
+        type : "Article",
+        title : "2e ASSEMBLÉ GÉNÉRALE ORDINAIRE | 2025 - Enjeux et defis citoyens",
+        path : "2e_assemblee_generale_ordinaire",
+        cover : '/2e_assemblee_generale_ordinaire/IMG_622095C45196-1.jpeg',
+        date : "22 Octobre 2022",
+        description : "Mesdames et Messieurs, chers camarades défenseurs des droits de l'homme, Conformément aux statuts de notre organisation et en ma qualité de Coordonnateur, la 2 Assemblée Générale Ordinaire de TLP Cameroun est convoquée pour le Samedi22 Octabre 2022 à Yaoundé. Cette irnportante rencontre se tiendra à Yaoundé, au siège du réseau I)ynamique Citoyenne, sis à Anguissa, face lycée, en présentiel et dans le respect des mesures barrières contre la pandémie à Covid-19 Ladite Assemblée Générale Ordinaire a pour objet : le bilan des trois années écoulées, la définition des axes d'intervention de TlP-Cameroun pour le triennat 2422-2425 et ie renouvellement des mandats au sein des instances et organes. Des invitations pawiendront àtous les membres qui seront désignés par leurs pairs pour représenter les différentes régions à ces assises. Dans i'espoir de la participation effective des délégués des differentes régions dans lesquelles la coalition nationale est représentée, veuill ez agréer Mesdames et Messieurs, chers camarades défenseurs des droits de l'homme,, I'expression de ma considération distinguée.",
+        picturesGalery : true,
+        pictures : [
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_30A33A400BF8-1.jpeg"},
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_1DE5518126D9-1.jpeg"},
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_D8AF43D00245-1.jpeg"},
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_9CD59D8E4144-1.jpeg"},
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_2CE9185DEAF3-1.jpeg"},
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_6BCD43B516B0-1.jpeg"},
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_622095C45196-1.jpeg"},
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_6625014D6AF1-1.jpeg"},
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_9CD59D8E4144-1.jpeg"},
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_87471B47D40A-1.jpeg"},
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_5FF32965401F-1.jpeg"},
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_9A3E824C79CB-1.jpeg"},
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_6974B55471BA-1.jpeg"},
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_CFAEA594A3B3-1.jpeg"},
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_E3B92DA46366-1.jpeg"},
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_F2A759A4C474-1.jpeg"},
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_F77EF55231A0-1.jpeg"},
+            {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_A82FD6FA315A-1.jpeg"},
+        ],
+        // videosGalery : true,
+        // videos : [
+        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_2867.mov"},
+        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_5798.mov"},
+        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_5799.mov"},
+        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_5878.mov"},
+        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_5888.mov"},
+        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_5934.mov"},
+        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_6028.mov"},
+        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_6032.mov"},
+        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_6051.mov"},
+        // ],
+    },
+    {
+        id : 2,
         type : "Convocation",
         title : "COALITION NATIONALE - Convocation 2e Assemblée générale le 22 Octobre 2022",
         path : "convocation_2e_assemblee_generale",
@@ -170,7 +212,7 @@ export const NewsItemsCards = [
         ]
     },
     {
-        id : 2,
+        id : 3,
         type : "Article",
         title : "Liberez Oumar SYLLA et Ibrahima DIALLO, activistes pro-démocratie guinéens !",
         cover : "/liberez_oumar_etibrahima/PHOTO-2022-09-26-16-30-13.jpg",
@@ -187,7 +229,7 @@ export const NewsItemsCards = [
         ]
     },
     {
-        id : 3,
+        id : 4,
         type : "Article",
         title : "Rencontre avec les OSC à Ngaoundéré",
         path : "rencontre_avec_osc_ngaoundere",
@@ -210,7 +252,7 @@ export const NewsItemsCards = [
         ]
     },
     {
-        id : 4,
+        id : 5,
         type : "Article",
         title : "Rencontre d'échange, de sensibilisation et de mobilisation des OSC et personnalité du Nord | Siège de CADPEN à Garoua",
         cover : "/rencontre_d_echange/PHOTO-2022-09-21-13-40-11 2.jpg",
@@ -227,7 +269,7 @@ export const NewsItemsCards = [
         ]
     },
     {
-        id : 5,
+        id : 6,
         type : "Article",
         title : "Journée internationale de la démocratie | Live Facebook",
         cover : "/journee_internationale_de_la_democratie/PHOTO-2022-09-15-13-44-44.jpg",
@@ -239,7 +281,7 @@ export const NewsItemsCards = [
         ]
     },
     {
-        id : 6,
+        id : 7,
         type : "Article",
         title : "Mission de sensibilisation et de mobilisation | Douala & Limbe",
         cover : "/dla_12_09_22/PHOTO-2022-09-13-18-14-03.jpg",
@@ -264,7 +306,7 @@ export const NewsItemsCards = [
         ]
     },
     {
-        id : 7,
+        id : 8,
         type : "Arcticle",
         path : "grand_concert_panafricain",
         title : "GRAND CONCERT PANAFRICAIN pour la Limitation2Mandats",
@@ -273,7 +315,7 @@ export const NewsItemsCards = [
         date : "29 Août 2022",
     },
     {
-        id : 8,
+        id : 9,
         type : "Article",
         title : "Atelier Monastère",
         path : "atelier_monastere",
@@ -298,7 +340,7 @@ export const NewsItemsCards = [
         ]
     },
     {
-        id : 9,
+        id : 10,
         type : "Communique",
         title : "Atelier de femmes Leaders et defenseures des droits humains au Cameroun",
         cover : "/ateliers_des_femmes_leaders/IMG_20211202_113140.jpg",
@@ -321,7 +363,7 @@ export const NewsItemsCards = [
         ]
     },
     {
-        id : 10,
+        id : 12,
         type : "Communique",
         title : "Atelier de formation numérique",
         path : "atelier_de_formation_numerique",
@@ -338,7 +380,7 @@ export const NewsItemsCards = [
         ]
     },
     {
-        id : 11,
+        id : 12,
         type : "Article",
         title : "Atelier national du pool des avocats pour la protection et la defense des membres de TLP CMR",
         cover : '/atelier_mise_en_place_Pool_des_avocats/IMG_20200814_124555.jpg',
@@ -359,7 +401,7 @@ export const NewsItemsCards = [
         ]
     },
     {
-        id : 12,
+        id : 13,
         type : "Article",
         title : "Jean-Marc BIKOKO | Le combat dans l'âme - CAMEROUN",
         cover : '/combat_dans_l_ame/JMB.png',
@@ -381,7 +423,7 @@ export const NewsItemsCards = [
         ]
     },
     {
-        id : 13,
+        id : 14,
         type : "Article",
         title : "L’activiste de TLP CMR Jean-Marc BIKOKO | Interview France 24",
         cover : '/interview_fr_24/IMG_20210927_173804.jpg',
@@ -403,7 +445,7 @@ export const NewsItemsCards = [
         ]
     },
     {
-        id : 14,
+        id : 15,
         type : "Article",
         title : "Arrestation des leaders Camerounais lors du lancement de TLP Cameroun",
         cover : '/arrestation_des_leaders_amerounais/arrestation_bikoko_jean_marc.png',
@@ -427,7 +469,7 @@ export const NewsItemsCards = [
         ]
     },
     {
-        id : 15,
+        id : 16,
         type : "Arcticle",
         title : "L’activiste de TLP CMR Jean-Marc BIKOKO arrêté et toujours détenu à Yaoundé",
         cover : "/arrestation_jean_marc_bikoko/jean_marc_bikoko.jpeg",
