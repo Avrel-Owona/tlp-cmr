@@ -11,6 +11,10 @@ export default function Home() {
       <>
           <Slider/>
           <ActualitiesSlider/>
+          <div className='w-full flex flex-col justify-center items-center bg-default py-20'>
+            <h1 className="bg-orange-500 text-center text-2xl text-white sm:text-4xl font-bold p-10 sm:px-20 font-news uppercase">Ensemble pour la libération de nos camarades</h1>
+                <video src='/2e_assemblee_generale_ordinaire/video-output-2D42A3CB-0F34-446D-B60C-364B14BC8BDC.mov' className='w-full sm:w-4/6' controls></video>
+          </div>
           <section className='flex flex-wrap justify-center sm:px-20 px-7 lg:pt-32 pt-20 mb-32'>
               <div className='w-full text-center lg:text-left sm:w-96 sm:mr-20 flex flex-col justify-center'>
                   <h3 className='text-2xl sm:text-3xl carte-text font-light font-news'>
