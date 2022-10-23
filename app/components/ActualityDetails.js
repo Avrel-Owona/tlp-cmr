@@ -15,7 +15,6 @@ import Modal from './Modal';
 const ActualityDetails = ({date, image, title, type, description, videosGalery, videos, picturesGalery, pictures, author, documents, documentPDF, id}) => {
 
 
-    console.log('description', )
     const [actualitiesList, setActualitiesList] = useState(NewsItemsCards)
     const [isBlock, setIsBlock] = useState(false)
     const [modal, setModal] = useState(false)
@@ -32,19 +31,18 @@ const ActualityDetails = ({date, image, title, type, description, videosGalery, 
         const newListActualities = actualitiesList.filter((e)=> e.id !== id)
         setActualitiesList(newListActualities)
         setIsBlock(true)
-        console.log('list', newListActualities)
     }
 
     const getImg = (img) => { 
         setModal(true)
         setImgSrc(img)
     }
-    const getActuality = (path,id) => {
-        Router.push({
-            pathname : `/actualites/${path}`, 
-            query : {data : JSON.stringify(id)},
-        })
-    }
+    // const getActuality = (path,id) => {
+    //     Router.push({
+    //         pathname : `/actualites/${path}`, 
+    //         query : {data : JSON.stringify(id)},
+    //     })
+    // }
     
 
     
@@ -58,13 +56,13 @@ const ActualityDetails = ({date, image, title, type, description, videosGalery, 
         <>
             <HeadSeo currentURL={String(router.asPath)} description={String(description ? description : title)} pageTitle={String(title)} previewImage={String(image)}/>
 
-        <div className='w-full items-center flex flex-col px-7 lg:px-20'>
+        <div className='w-full items-center flex flex-col'>
             <Modal imgSrc={imgSrc} modal={modal} setModal={setModal}/>
-            <div className='w-full sm:w-8/12 lg:w-10/12 xl:w-6/12 relative flex flex-col justify-center'>  
+            <div className='w-full sm:w-8/12 lg:w-10/12 xl:w-6/12 relative flex flex-col justify-center px-7 sm:px-0'>  
                 <img src={image} alt="previewImage"/>
                 <h1 className='font-light text-lg sm:text-3xl bg-orange-500 text-white text-center py-4 px-12 left-[-15%] bottom-[10%] sm:absolute shadow-lg title-head'>{type}</h1>
             </div>
-            <div className='sm:w-8/12 lg:w-10/12 xl:w-6/12'>
+            <div className='sm:w-8/12 lg:w-10/12 xl:w-6/12 px-7 lg:px-20'>
                 <h1 className='font-semibold text-4xl sm:text-6xl mt-20 text-center uppercase title-details'>{title}</h1>
                 <h2 className='mt-20 font-light text-base text-white bg-orange-500 text-center py-6 sm:text-xl'>{date} |<span className='font-bold'> {author ? author : 'TLP CMR'}</span></h2>
                 <div className='mt-10 flex'>
@@ -98,10 +96,10 @@ const ActualityDetails = ({date, image, title, type, description, videosGalery, 
             </div>
             
                 
-                { (picturesGalery || picturesGalery) && (
-                    <div className='sm:px-20 pt-7'>
-                        <h3 className='carte-text carte-text-after text-center text-4xl font-bold py-36 uppercase'>Quelques medias</h3>
-                        <div className='columns-1 sm:columns-2 lg:columns-3 gallerie'>
+                { (picturesGalery || videosGalery) && (
+                    <div className='sm:px-20 pt-7 px-7 lg:px-20'>
+                        <h3 className='carte-text carte-text-after text-center text-4xl font-bold py-36 uppercase'>Quelques médias</h3>
+                        <div className='columns-2 lg:columns-3 xl:columns-4 gallerie'>
                             {pictures.map((img, index)=> {
                                 return (
                                     <>
@@ -113,7 +111,7 @@ const ActualityDetails = ({date, image, title, type, description, videosGalery, 
                             })}
                             
                             { 
-                                videos.map((video, index)=>{
+                                videos?.map((video, index)=>{
                                     return (
                                         <div key={index} className='pics cursor-pointer mb-4'>
                                             <video controls src={video.videoSrc}/>
@@ -124,19 +122,20 @@ const ActualityDetails = ({date, image, title, type, description, videosGalery, 
                         </div>
                     </div>
                 )} 
+            
                 {documents && (
-                    <>
+                    <div className='px-7 lg:px-20'>
                         <h1 className='uppercase text-start w-full text-2xl sm:text-5xl mt-32 sm:mt-60'>Documents à télécharger</h1>
                         <ul className='w-full flex mt-4 sm:mt-8 flex-col items-start'>
-                        {documentPDF.map((doc, index)=>{
-                            return (
-                                <li key={index}>
-                                    <a target='_blank' href={doc.documentSrc} className='flex items-center text-gray-400 font-thin font-news sm:text-2xl mt-2 cursor-pointer hover:text-black'><FaFilePdf className='text-orange-500 mr-3'/>{doc.name}</a>
-                                </li>
-                            )
-                        })}
-                    </ul>
-                    </>
+                            {documentPDF.map((doc, index)=>{
+                                return (
+                                    <li key={index}>
+                                        <a target='_blank' href={doc.documentSrc} className='flex items-center text-gray-400 font-thin font-news sm:text-2xl mt-2 cursor-pointer hover:text-black'><FaFilePdf className='text-orange-500 mr-3'/>{doc.name}</a>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
                 )}
                 <HeaderAbout />
                 {/* {isBlock ? 
