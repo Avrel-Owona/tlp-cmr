@@ -34,6 +34,7 @@ const ActualitiesSlider = () => {
                 breakpoints={{
                   576: {
                     // width: 576,
+                    // initialSlide: 0,
                     slidesPerView: 2,
                   },
                 //   768: {
