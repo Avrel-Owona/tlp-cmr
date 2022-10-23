@@ -130,7 +130,7 @@ footer div:nth-child(1) {
     padding: 0 0 3rem 0;
 }
 .wrapper-copyright {
-    width: 70%;
+    width: 100%;
     font-size: 13px;
     color: #0000006b;
 }
@@ -208,6 +208,9 @@ a:hover {
     color: #f97316;
     text-decoration: unset;
 }
+footer div:nth-child(1) {
+    width: 80%;
+}
 @media screen and (min-width : 600px) {
     .slide .img {
         width: 100%; 
@@ -228,6 +231,12 @@ a:hover {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
+    footer div:nth-child(1) {
+        width: 50%;
+    }
+    .wrapper-copyright {
+        width: 70%;
+    }
     .logo {
         width: 10rem;
     }
@@ -242,12 +251,13 @@ a:hover {
         margin-top: 0;
     }
     footer div:nth-child(1) {
-        width: 70%;
+        width: 50%;
     }
 }
 @media (min-width: 820px){
     footer div:nth-child(1) {
         justify-content: space-between !important;
+        width: 70%;
     }
     .container-slide {
         padding: 0 5rem;
@@ -268,9 +278,9 @@ a:hover {
 }
 
 @media (min-width: 1280px){
-    .title {
+    /* .title {
         font-size: 6rem !important;
-    }
+    } */
 }
 
 
