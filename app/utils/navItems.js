@@ -11,13 +11,13 @@ export const NavItems = [
     },
     {
         id : 3,
-        title : 'Web TV',
-        path : '/web_tv'
-    },
-    {
-        id : 3,
         title : 'TLP CMR',
         path : '/tlp_cmr'
+    },
+    {
+        id : 4,
+        title : 'Web TV',
+        path : '/web_tv'
     },
     // {
     //     id : 4,
@@ -69,9 +69,9 @@ export const NavItems = [
     //     ]
     // },
     {
-        id : 5,
-        title : 'Offres',
-        path : '/offres'
+        id : 6,
+        title : 'Ressources',
+        path : '/ressources'
     },
 
 ]
@@ -138,8 +138,8 @@ export const FooterItems = [
     },
     {
         id : 2,
-        title : 'Tournons La page Cameroun',
-        path : '/tlp_cmr'
+        title : 'Web Tv',
+        path : '/web_tv'
     },
 ]
 
