@@ -22,15 +22,15 @@ const ActualitiesSlider = () => {
         })
     }
     return (
-        <section className="pt-28 pb-10 lg:py-28 bg-gray-100">
+        <section className="lg:pt-28 pb-10 lg:py-28 bg-gray-100">
             <div>
-                <div className="flex items-center sm:justify-between px-7 lg:px-20 justify-center lg:pl-36 flex-wrap">
-                    <h1 className="text-3xl sm:text-6xl font-news text-orange-500 hidden sm:block">Actualités</h1>
-                    <Link href="/actualites"><button className="text-white flex mt-10 sm:mt-0 items-center px-12 py-4 bg-orange-500">Toutes les actualités <FiArrowRight className='pl-3 text-3xl'/></button></Link>
+                <div className="hidden lg:flex items-center sm:justify-between px-7 lg:px-20 justify-center lg:pl-36 flex-wrap">
+                    <h1 className="text-4xl lg:text-5xl font-thin font-news text-orange-500">Actualités</h1>
+                    <Link href="/actualites"><button className="text-orange-500 lg:text-white border-0.5 ease-in duration-100 border-orange-500 lg:bg-orange-500 text-sm sm:text-xl hidden sm:flex sm:mt-0 items-center px-12 py-3 font-thin  hover:lg:bg-transparent hover:lg:text-orange-500 hover:lg:border-orange-500">Toutes les actualités <FiArrowRight className='pl-3 text-3xl'/></button></Link>
                 </div>
             </div>
             <Swiper
-                initialSlide={1}
+                initialSlide={0}
                 breakpoints={{
                   576: {
                     // width: 576,
@@ -56,20 +56,20 @@ const ActualitiesSlider = () => {
                 }}
                 // onSwiper={setSwiperRef}
                 slidesPerView={1}
-                centeredSlides={true}
+                // centeredSlides={true}
                 spaceBetween={30}
                 pagination={{
                   dynamicBullets: true,
                 }}
                 navigation={true}
                 modules={[Pagination, Navigation]}
-                className="mySwiper mt-20 px-7"
+                className="mySwiper mt-20 px-7 flex flex-col items-center"
             >
                 {NewsItemsCards.map((actuality, index)=>{
                     return (
                         
                             <div key={index} className='border-0.5 mr-7'>
-                                <SwiperSlide>
+                                <SwiperSlide onClick={()=>getActuality(actuality.path, actuality.id)}>
                                     <img src={actuality.cover} className='h-full w-full object-cover card-news-slide' alt="img-cover"/>
                                     <div className='flex items-end bg-card-news absolute top-0 w-full h-full'>
                                                 <div className='flex flex-col justify-between p-8 text-white w-full'>
@@ -79,7 +79,7 @@ const ActualitiesSlider = () => {
                                                         {actuality.title}
                                                         </h3>
                                                         <div className='flex items-baseline justify-between'>
-                                                            <button name="details" onClick={()=>getActuality(actuality.path, actuality.id)} className='flex items-center mt-8 font-extralight cursor-pointer'>Lire <FiArrowRight className='text-2xl pl-3 text-orange-500'/></button>
+                                                            <button name="details" className='flex items-center mt-8 font-extralight cursor-pointer'>Lire <FiArrowRight className='text-2xl pl-3 text-orange-500'/></button>
                                                             <span className='date-card-news'>{actuality.date}</span>
                                                         </div>
                                                     </>
@@ -90,6 +90,7 @@ const ActualitiesSlider = () => {
                         
                     )
                 })}
+                <Link href="/actualites"><button className="text-orange-500 lg:hidden border-0.5 w-max mt-10 sm:mt-20 sm:font-light border-orange-500 text-sm sm:text-base flex items-center px-5 py-2 sm:px-12 sm:py-4">Toutes les actualités <FiArrowRight className='pl-3 text-3xl'/></button></Link>
             </Swiper>
         </section>
     )
