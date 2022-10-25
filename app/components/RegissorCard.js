@@ -6,8 +6,8 @@ const RegissorCard = ({name, role, img}) => {
             <div className='h-80 w-full overflow-hidden'>
                 <img src={img} className='w-full object-cover' alt="regissor-img"/>
             </div>
-            <h3 className='text-center text-2xl text-gray-700 font-medium pt-8'>{name}</h3>
-            <span className='text-gray-400 text-center text-lg pt-4 font-light'>{role}</span>
+            <h3 className='text-center text-xl text-gray-700 font-medium pt-8'>{name}</h3>
+            <span className='text-gray-400 text-center text-sm lg:text-base pt-4 font-light'>{role}</span>
         </div>
     );
 };
