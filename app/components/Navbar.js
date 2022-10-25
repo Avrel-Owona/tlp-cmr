@@ -53,12 +53,12 @@ export const Navbar = () => {
                 </div>
             </div>
                 <>
-                <div className={`flex items-center justify-center bar-nav h-20 w-full`}>
+                <div className={`flex items-center justify-center bar-nav w-full`}>
                     {/*=========== NAVBAR PC ================*/}
                     <div className='flex items-center sm:mx-20 mx-7 justify-between w-full nav'>
                         <div className={`justify-center flex  items-center flex-shrink-0 cursor-pointer`}>
                             <Link href={'/'}>
-                                <img className={`w-32 pt-4 ${pathname === '/' ? (bgColor === 'bg-transparent' ? 'opa' : '') : ''}`} src={pathname === '/' ? (bgColor === 'bg-transparent' ? '/icon-navbar-white.png' : '/icon-navbar.png') : '/icon-navbar.png'}  alt="TLP TV logo"/>
+                                <img className={`w-32 ${pathname === '/' ? (bgColor === 'bg-transparent' ? 'opa' : '') : ''}`} src={pathname === '/' ? (bgColor === 'bg-transparent' ? '/icon-navbar-white.png' : '/icon-navbar.png') : '/icon-navbar.png'}  alt="TLP TV logo"/>
                                 {/*<span className='font-bold'>CMR</span>*/}
                             </Link>
                         </div>
@@ -67,7 +67,7 @@ export const Navbar = () => {
                                 {NavItems.map((item, index)=>{
                                     // if (item.title === 'Régions') {
                                     //     return (
-                                    //             <ActiveLink key={index} activeClassName="font-semibold text-orange-500 border-b-2 border-orange-600" href={item.path}>
+                                    //             <ActiveLink key={index} activeClassName="font-light text-orange-500 border-b-2 border-orange-600" href={item.path}>
                                     //                 <li className='cursor-pointer font-sans mx-5 py-36 text-sm'
                                     //                     onMouseEnter={()=>setDropdown(true)}
                                     //                     onMouseLeave={()=>setDropdown(false)}>
@@ -78,8 +78,8 @@ export const Navbar = () => {
                                     //     )
                                     // }
                                     return (
-                                        <ActiveLink key={index} activeClassName="font-semibold text-orange-500 l border-b-2 border-orange-600" href={item.path}>
-                                            <li className='cursor-pointer font-sans mx-3 py-2 text-sm'>{item.title}</li>
+                                        <ActiveLink key={index} activeClassName="font-sans text-orange-500 l border-b-2 border-orange-600" href={item.path}>
+                                            <li className='cursor-pointer font-sans ml-6 py-2 text-sm'>{item.title}</li>
                                         </ActiveLink>
                                     )
                                 })}
@@ -88,7 +88,7 @@ export const Navbar = () => {
                         {/*=========== NAVBAR PHONE ================*/}
                         <div className='flex h-10 w-10 justify-end lg:hidden'>
                             <button
-                                className={`flex items-center text-4xl font-thin justify-center focus:outline-none ${pathname === '/' ? (bgColor === 'bg-transparent' ? 'text-white' : 'text-black') : 'text-black'} focus:ring-offset-2 focus:ring-white`}
+                                className={`flex items-center text-xl sm:text-2xl p-2 font-thin justify-center focus:outline-none text-white ${pathname === '/' ? (bgColor === 'bg-transparent' ? 'text-white' : 'bg-orange-500') : ' bg-orange-500'} focus:ring-offset-2 focus:ring-white`}
                                 onClick={() => setIsOpen(!isOpen)}
                                 name={'burger'}
                             >
@@ -103,68 +103,68 @@ export const Navbar = () => {
                         <div className={`lg:hidden h-screen flex items-center justify-center absolute text-black top-0 w-full ${isOpen ? 'left-0' : 'left-[-100%]'} bg-white ease-in duration-300`}>
                         {isOpen ? 
                             <button
-                                    className='text-black flex items-center justify-center focus:outline-none focus:ring-offset-2 focus:ring-white text-4xl z-10 absolute top-8 right-10%'
+                                    className='text-gray-500 flex items-center justify-center focus:outline-none focus:ring-offset-2 focus:ring-white text-4xl z-10 absolute top-10 right-10%'
                                     onClick={() => setIsOpen(!isOpen)}
                                     name={'burger'}
                                 >
 
                                     <AiOutlineClose/>
                             </button> : null}
-                            <ul className='px-2 pt-2 pb-3 sm:px-3'>
-                                <ActiveLink activeClassName="font-semibold text-orange-600" href={'/'}>
-                                    <li key='' className='cursor-pointer font-sans py-3 text-lg font-normal'>
+                            <ul className='px-2 pt-2 pb-3 sm:px-3 text-gray-500 font-thin'>
+                                <ActiveLink activeClassName="font-light text-orange-600" href={'/'}>
+                                    <li key='' className='cursor-pointer font font-sans py-3 text-lg '>
                                         <a href="/">Acceuil</a>
                                     </li>
                                 </ActiveLink>
-                                <ActiveLink activeClassName="font-semibold text-orange-600" href={'/actualites'}>
-                                    <li key='' className='cursor-pointer font-sans py-3 text-lg font-normal'>
+                                <ActiveLink activeClassName="font-light text-orange-600" href={'/actualites'}>
+                                    <li key='' className='cursor-pointer font-sans py-3 text-lg '>
                                         <a href='/actualites'>Actualités</a>
                                     </li>
                                 </ActiveLink>
-                                <ActiveLink activeClassName="font-semibold text-orange-600" href={'/web_tv'}>
-                                    <li key='' className='cursor-pointer font-sans py-3 text-lg font-normal'>Web TV</li>
+                                <ActiveLink activeClassName="font-light text-orange-600" href={'/web_tv'}>
+                                    <li key='' className='cursor-pointer font-sans py-3 text-lg '>Web TV</li>
                                 </ActiveLink>
-                                <ActiveLink activeClassName="font-semibold text-orange-600" href={'/tlp_cmr'}>
-                                    <li key='' className='cursor-pointer font-sans py-3 text-lg font-normal'>TLP CMR</li>
+                                <ActiveLink activeClassName="font-light text-orange-600" href={'/tlp_cmr'}>
+                                    <li key='' className='cursor-pointer font-sans py-3 text-lg '>TLP CMR</li>
                                 </ActiveLink>
-                                    {/* <li key='' className='cursor-pointer font-sans py-3 text-lg font-normal' onClick={()=>setIsDropRegionsItems(!isDropRegionsItems)}>Régions</li> */}
+                                    {/* <li key='' className='cursor-pointer font-sans py-3 text-lg ' onClick={()=>setIsDropRegionsItems(!isDropRegionsItems)}>Régions</li> */}
                                 {/* {isDropRegionsItems ? (
                                     <div className=' ease-in duration-100'>
 
-                                        <ActiveLink activeClassName="font-semibold text-orange-600" href={'/regions/admaoua'}>
-                                            <li key='' className='cursor-pointer font-sans py-3 text-lg font-normal hover:bg-gray-100 px-5'>Adamaoua</li>
+                                        <ActiveLink activeClassName="font-light text-orange-600" href={'/regions/admaoua'}>
+                                            <li key='' className='cursor-pointer font-sans py-3 text-lg  hover:bg-gray-100 px-5'>Adamaoua</li>
                                         </ActiveLink>
-                                        <ActiveLink activeClassName="font-semibold text-orange-600" href={'/regions/centre'}>
-                                            <li key='' className='cursor-pointer font-sans py-3 text-lg font-normal hover:bg-gray-100 px-5'>Centre</li>
+                                        <ActiveLink activeClassName="font-light text-orange-600" href={'/regions/centre'}>
+                                            <li key='' className='cursor-pointer font-sans py-3 text-lg  hover:bg-gray-100 px-5'>Centre</li>
                                         </ActiveLink>
-                                        <ActiveLink activeClassName="font-semibold text-orange-600" href={'/regions/est'}>
-                                            <li key='' className='cursor-pointer font-sans py-3 text-lg font-normal hover:bg-gray-100 px-5'>Est</li>
+                                        <ActiveLink activeClassName="font-light text-orange-600" href={'/regions/est'}>
+                                            <li key='' className='cursor-pointer font-sans py-3 text-lg  hover:bg-gray-100 px-5'>Est</li>
                                         </ActiveLink>
-                                        <ActiveLink activeClassName="font-semibold text-orange-600" href={'/regions/extreme-nord'}>
-                                            <li key='' className='cursor-pointer font-sans py-3 text-lg font-normal hover:bg-gray-100 px-5'>Extrême-Nord</li>
+                                        <ActiveLink activeClassName="font-light text-orange-600" href={'/regions/extreme-nord'}>
+                                            <li key='' className='cursor-pointer font-sans py-3 text-lg  hover:bg-gray-100 px-5'>Extrême-Nord</li>
                                         </ActiveLink>
-                                        <ActiveLink activeClassName="font-semibold text-orange-600" href={'/regions/littoral'}>
-                                            <li key='' className='cursor-pointer font-sans py-3 text-lg font-normal hover:bg-gray-100 px-5'>Littoral</li>
+                                        <ActiveLink activeClassName="font-light text-orange-600" href={'/regions/littoral'}>
+                                            <li key='' className='cursor-pointer font-sans py-3 text-lg  hover:bg-gray-100 px-5'>Littoral</li>
                                         </ActiveLink>
-                                        <ActiveLink activeClassName="font-semibold text-orange-600" href={'/regions/nord'}>
-                                            <li key='' className='cursor-pointer font-sans py-3 text-lg font-normal hover:bg-gray-100 px-5'>Nord</li>
+                                        <ActiveLink activeClassName="font-light text-orange-600" href={'/regions/nord'}>
+                                            <li key='' className='cursor-pointer font-sans py-3 text-lg  hover:bg-gray-100 px-5'>Nord</li>
                                         </ActiveLink>
-                                        <ActiveLink activeClassName="font-semibold text-orange-600" href={'/nord-ouest'}>
-                                            <li key='' className='cursor-pointer font-sans py-3 text-lg font-normal hover:bg-gray-100 px-5'>Nord-Ouest</li>
+                                        <ActiveLink activeClassName="font-light text-orange-600" href={'/nord-ouest'}>
+                                            <li key='' className='cursor-pointer font-sans py-3 text-lg  hover:bg-gray-100 px-5'>Nord-Ouest</li>
                                         </ActiveLink>
-                                        <ActiveLink activeClassName="font-semibold text-orange-600" href={'/regions/ouest'}>
-                                            <li key='' className='cursor-pointer font-sans py-3 text-lg font-normal hover:bg-gray-100 px-5'>Ouest</li>
+                                        <ActiveLink activeClassName="font-light text-orange-600" href={'/regions/ouest'}>
+                                            <li key='' className='cursor-pointer font-sans py-3 text-lg  hover:bg-gray-100 px-5'>Ouest</li>
                                         </ActiveLink>
-                                        <ActiveLink activeClassName="font-semibold text-orange-600" href={'/regions/sud'}>
-                                            <li key='' className='cursor-pointer font-sans py-3 text-lg font-normal hover:bg-gray-100 px-5'>Sud</li>
+                                        <ActiveLink activeClassName="font-light text-orange-600" href={'/regions/sud'}>
+                                            <li key='' className='cursor-pointer font-sans py-3 text-lg  hover:bg-gray-100 px-5'>Sud</li>
                                         </ActiveLink>
-                                        <ActiveLink activeClassName="font-semibold text-orange-600" href={'/regions/sud-ouest'}>
-                                            <li key='' className='cursor-pointer font-sans py-3 text-lg font-normal hover:bg-gray-100 px-5'>Sud-Ouest</li>
+                                        <ActiveLink activeClassName="font-light text-orange-600" href={'/regions/sud-ouest'}>
+                                            <li key='' className='cursor-pointer font-sans py-3 text-lg  hover:bg-gray-100 px-5'>Sud-Ouest</li>
                                         </ActiveLink>
                                     </div>
                                 ) : null} */}
-                                <ActiveLink activeClassName="font-semibold text-orange-600" href={'/offres'}>
-                                    <li key='' className='cursor-pointer font-sans py-3 text-lg font-normal'>Offres</li>
+                                <ActiveLink activeClassName="font-light text-orange-600" href={'/offres'}>
+                                    <li key='' className='cursor-pointer font-sans py-3 text-lg '>Offres</li>
                                 </ActiveLink>
                             </ul>
                         </div>
