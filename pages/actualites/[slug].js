@@ -7,7 +7,7 @@ import { NewsItemsCards } from "../../app/utils/navItems"
 const Slug = () => {
     const [actualityDetails, setActualityDetails] = useState([])
     const actualityId = useRouter()
-    // console.log('idSlug', actualityId.query.data)
+    console.log('idSlug', actualityId.query.data)
 
     const slug = actualityId.query.data
     useEffect(()=> {
