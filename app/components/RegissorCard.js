@@ -2,7 +2,7 @@ import React from 'react';
 
 const RegissorCard = ({name, role, img}) => {
     return (
-        <div className='w-80 border-0.5 flex flex-col items-center pb-8 carte mt-4 mx-2'>
+        <div className='sm:w-80 w-full border-0.5 shadow-xl flex flex-col items-center pb-8 carte mt-4 sm:mx-2'>
             <div className='h-80 w-full overflow-hidden'>
                 <img src={img} className='w-full object-cover' alt="regissor-img"/>
             </div>
