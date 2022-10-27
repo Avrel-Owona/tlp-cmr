@@ -22,11 +22,11 @@ const ActualitiesSlider = () => {
         })
     }
     return (
-        <section className="lg:pt-28 pb-10 lg:py-28 bg-gray-100">
+        <section className="lg:pt-28 pb-10 lg:py-28 bg-gray-100 lg:bg-white"> 
             <div>
-                <div className="hidden lg:flex items-center sm:justify-between px-7 lg:px-20 justify-center lg:pl-36 flex-wrap">
-                    <h1 className="text-4xl lg:text-5xl font-thin font-news text-orange-500">Actualités</h1>
-                    <Link href="/actualites"><button className="text-orange-500 lg:text-white border-0.5 ease-in duration-100 border-orange-500 lg:bg-orange-500 text-sm sm:text-xl hidden sm:flex sm:mt-0 items-center px-12 py-3 font-thin  hover:lg:bg-transparent hover:lg:text-orange-500 hover:lg:border-orange-500">Toutes les actualités <FiArrowRight className='pl-3 text-3xl'/></button></Link>
+                <div className="hidden lg:flex items-center sm:justify-between px-7 lg:px-20 justify-center xl:pl-36 flex-wrap">
+                    <h1 className="text-3xl uppercase font-thin text-orange-500">Actualités</h1>
+                    <Link href="/actualites"><button className="text-orange-400 lg:text-white border-0.5 ease-in duration-100 border-orange-500 lg:bg-orange-500 text-sm sm:text-base hidden sm:flex sm:mt-0 items-center px-12 py-3 font-thin  hover:lg:bg-transparent hover:lg:text-orange-500 hover:lg:border-orange-500">Toutes les actualités <FiArrowRight className='pl-3 text-3xl'/></button></Link>
                 </div>
             </div>
             <Swiper
