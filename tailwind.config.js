@@ -11,7 +11,8 @@ module.exports = {
     },
     backgroundImage: {
       'default': "url('/ligne.svg')",
-      'card-news' : 'linear-gradient(0deg, rgb(33, 37, 41) 0px, rgba(33, 37, 41, 0) 100%)'
+      'card-news' : 'linear-gradient(0deg, rgb(33, 37, 41) 0px, rgba(33, 37, 41, 0) 100%)',
+      'layout' : 'url(/2e_assemblee_generale_ordinaire/IMG_2CE9185DEAF3-1.jpeg)'
     },
     extend: {
       inset: {
