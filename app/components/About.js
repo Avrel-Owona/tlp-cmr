@@ -11,4 +11,5 @@ const About = ({title, text}) => {
             </section>
     )
 }
+
 export default About;
