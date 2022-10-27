@@ -152,7 +152,7 @@ export const NewsItemsCards = [
         path : "2e_assemblee_generale_ordinaire",
         cover : '/2e_assemblee_generale_ordinaire/IMG_622095C45196-1.jpeg',
         date : "22 Octobre 2022",
-        description : "Mesdames et Messieurs, chers camarades défenseurs des droits de l'homme, Conformément aux statuts de notre organisation et en ma qualité de Coordonnateur, la 2 Assemblée Générale Ordinaire de TLP Cameroun est convoquée pour le Samedi22 Octabre 2022 à Yaoundé. Cette irnportante rencontre se tiendra à Yaoundé, au siège du réseau I)ynamique Citoyenne, sis à Anguissa, face lycée, en présentiel et dans le respect des mesures barrières contre la pandémie à Covid-19 Ladite Assemblée Générale Ordinaire a pour objet : le bilan des trois années écoulées, la définition des axes d'intervention de TlP-Cameroun pour le triennat 2422-2425 et ie renouvellement des mandats au sein des instances et organes. Des invitations pawiendront àtous les membres qui seront désignés par leurs pairs pour représenter les différentes régions à ces assises. Dans i'espoir de la participation effective des délégués des differentes régions dans lesquelles la coalition nationale est représentée, veuill ez agréer Mesdames et Messieurs, chers camarades défenseurs des droits de l'homme,, I'expression de ma considération distinguée.",
+        // description : "Mesdames et Messieurs, chers camarades défenseurs des droits de l'homme, Conformément aux statuts de notre organisation et en ma qualité de Coordonnateur, la 2 Assemblée Générale Ordinaire de TLP Cameroun est convoquée pour le Samedi22 Octabre 2022 à Yaoundé. Cette irnportante rencontre se tiendra à Yaoundé, au siège du réseau I)ynamique Citoyenne, sis à Anguissa, face lycée, en présentiel et dans le respect des mesures barrières contre la pandémie à Covid-19 Ladite Assemblée Générale Ordinaire a pour objet : le bilan des trois années écoulées, la définition des axes d'intervention de TlP-Cameroun pour le triennat 2422-2425 et ie renouvellement des mandats au sein des instances et organes. Des invitations pawiendront àtous les membres qui seront désignés par leurs pairs pour représenter les différentes régions à ces assises. Dans i'espoir de la participation effective des délégués des differentes régions dans lesquelles la coalition nationale est représentée, veuill ez agréer Mesdames et Messieurs, chers camarades défenseurs des droits de l'homme,, I'expression de ma considération distinguée.",
         picturesGalery : true,
         pictures : [
             {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_30A33A400BF8-1.jpeg"},
@@ -174,18 +174,21 @@ export const NewsItemsCards = [
             {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_F77EF55231A0-1.jpeg"},
             {imgSrc : "/2e_assemblee_generale_ordinaire/IMG_A82FD6FA315A-1.jpeg"},
         ],
-        // videosGalery : true,
-        // videos : [
-        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_2867.mov"},
-        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_5798.mov"},
-        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_5799.mov"},
-        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_5878.mov"},
-        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_5888.mov"},
-        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_5934.mov"},
-        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_6028.mov"},
-        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_6032.mov"},
-        //     {videoSrc : "/2e_assemblee_generale_ordinaire/IMG_6051.mov"},
-        // ],
+        documents : true,
+        documentPDF : [
+            {
+                documentSrc : '/convocation_ag/convocation_2e_assemblee_generale.pdf',
+                name : 'Convocation 2e Assemblée générale le 22 Octobre 2022',
+            },
+            {
+                documentSrc : '/convocation_ag/programme_2e_ag.pdf',
+                name : 'Programme 2e Assemblée générale le 22 Octobre 2022',
+            },
+            {
+                documentSrc : '/convocation_ag/tdr_2e_ag.pdf',
+                name : 'Termes de reference | 2e Assemblée générale le 22 Octobre 2022',
+            },
+        ]
     },
     {
         id : 2,
@@ -512,4 +515,51 @@ export const NewsItemsCards = [
         cover : "/0a3fac1b-6bc3-4670-affe-9fbe24eedfad.JPG",
         date : "04 Juillet 2016",
     },
+]
+
+export const MembresEnDanger = [
+    {
+        name : 'Oumar SYLLA',
+        img: "/membre_en_danger/Membres en danger.jpeg",
+        date : '30 Juillet 2022',
+        country : 'Guinée',
+        textOne : ', alias Foniké Menguè, coordinateur du Front national pour la défense de la Constitution (FNDC) et coordinateur adjoint de Tournons La Page Guinée (TLP-Guinée), a été arrêté à son domicile vers 1h40 du matin, le 30 juillet par des militaires et gendarmes encagoulés et lourdement armés puis emmenés vers une destination inconnue. Pendant toute la journée, la famille d’Oumar SYLLA n’a pas été informée de sa localisation. Ce n’est qu’à partir de 15 heures que nous avons été informés qu’il était détenu au haut commandement de la gendarmerie. Cette arrestation, en plus d’être arbitraire, est absolument illégale. La loi guinéenne interdit en effet toute arrestation à domicile entre 21h et 6h du matin.',
+        textTwo : "Cette arrestation et celle d'Ibrahima Diallo, arrêté le même jour vers 18 heures, surviennent alors que des violences ont de nouveau éclaté à Conakry, à la suite de l’interdiction par les autorités d’une série de rassemblements organisés par le FNDC à partir du 23 juin pour dénoncer la gestion unilatérale de la transition par la Junte militaire. Lors du dernier rassemblement du 28 juillet, les forces de l’ordre ont rapporté 12 blessés dans leurs rangs et l’interpellation de 85 personnes. Selon le FNDC, quatre personnes ont été tuées et plusieurs autres blessées par balle, dont 5 actuellement en situation critique. La violente répression du régime a pour objectifs de museler toute voix discordante et de décourager les citoyens et citoyennes à se mobiliser.",
+        link : 'https://cutt.ly/ZZmZt4j'
+    },
+    {
+        name : 'Ibrahima Diallo',
+        img: "/membre_en_danger/Membres en danger (1).jpeg",
+        date : '30 Juillet 2022',
+        country : 'Guinée',
+        textOne : ', coordinateur de TLP-Guinée et responsable des opérations du FNDC, a été arrêté aux environs de 18h à son domicile le 30 juillet, par des militaires et gendarmes encagoulés et lourdement armés puis emmenés vers le haut commandement de la gendarmerie. Là-bas il rejoindra Oumar SYLLA, coordinateur du FNDC et coordinateur adjoint de TLP Guinée, arrêté le même jour vers 1h40 du matin à son domicile.',
+        textTwo : "Cette arrestation et celle d'Oumar SYLLA surviennent alors que des violences ont de nouveau éclaté à Conakry, à la suite de l’interdiction par les autorités d’une série de rassemblements organisés par le FNDC à partir du 23 juin pour dénoncer la gestion unilatérale de la transition par la Junte militaire. Lors du dernier rassemblement du 28 juillet, les forces de l’ordre ont rapporté 12 blessés dans leurs rangs et l’interpellation de 85 personnes. Selon le FNDC, quatre personnes ont été tuées et plusieurs autres blessées par balle, dont 5 actuellement en situation critique. La violente répression du régime a pour objectifs de museler toute voix discordante et de décourager les citoyens et citoyennes à se mobiliser. ",
+        link : 'https://cutt.ly/ZZmZt4j'
+    },
+    {
+        name : 'Jean-Rémy Yama',
+        img: "/membre_en_danger/Membres en danger (2).jpeg",
+        date : '27 Fevrier 2022',
+        country : 'Gabon',
+        textOne : ', président de Dynamique unitaire, la plus grande coalition syndicale du Gabon et membre de Tournons La Page – est placé en détention arbitraire depuis le 2 mars dernier pour supposé abus de confiance. Or, aucune cour gabonaise a prononcé un jugement à l’encontre de Jean-Rémy Yama : il est donc présumé innocent.',
+        textTwo : "En effet, la prochaine élection présidentielle se tiendra dans un an. Le président sortant, Ali Bongo – au pouvoir depuis octobre 2009 - a annoncé qu’il sera candidat pour un troisième mandat en 2023. Depuis 2016, Tournons La Page et ses partenaires gabonais se sont mobilisés pour promouvoir l'alternance démocratique au Gabon. ",
+        link : 'https://bit.ly/3mIG0To'
+    },
+    {
+        name : 'Tony Germain NKINA',
+        img: "/membre_en_danger/Tony German Nkina.png",
+        date : '13 octobre 2020',
+        country : 'Burundi',
+        textOne : ", Ancien membre de l'APRODEH, il a été arrêté le 13 octobre 2020 dans la province Kayanza, au nord du Burundi. Il a été accusé de collaborer avec le groupe armé d’opposition RED-Tabara (Résistance pour un État de droit au Burundi), que le gouvernement accuse d’être responsable d’une série d’attaques armées menées dans la province de Kayanza début octobre 2020. Tony Germain Nkina a été arrêté alors qu’il rendait visite à un client dans la commune de Kabarore, une localité qui a connue des attaques pendant cette période. Il a été interrogé et détenu dans les locaux du Service National de Renseignement (SNR) à Kayanza, puis transféré au poste de police avant d’être transféré le 16 octobre à la prison central de Ngozi, dans la province de Ngozi, où il est toujours détenu.",
+        textTwo : "Condamné à 5 ans de prison et à une amende d’un million de francs burundais par le tribunal de Grande instance de Kayanza le 15 juin 2021, sa condamnation est confirmée par le jugement de la cour d’appel de Ngoziau mois d’août. Il est depuis emprisonné au prison centrale de Ngozi.  Il a été inculpé d’atteinte à la sécurité intérieure de l’État dès son arrestation, puis reconnu coupable de «collaboration avec les rebelles ayant attaqué le Burundi ». Ces accusations sont infondées mais tout simplement, il est poursuivi à cause de son antécédent de collaborer avec l’APRODH, une Association Burundaise pour la Protection des Droits Humains et des Personnes Détenues qui a été radiée par le pouvoir de Gitega.",
+    },
+    {
+        name : 'Price Fadel',
+        img: "/membre_en_danger/Prince Fadel.png",
+        date : '25 Novembre 2019',
+        country : 'Togo',
+        textOne : ", Né le 12 mai 1994, C'est un artiste engagé. Il est membre du mouvement des artistes  engagés du Togo, lui-meme membre de TLP-Togo. Il a été arrêté et placé en détention préventive dans l'affaire « Tigre Révolution » depuis le 25 novembre 2019. Engagé depuis l'avènement du mouvement en 2017, ses chansons étaient jouées dans les manifestations où il allait jusque dans les villages et villes du pays. Après avoir sorti une nouvelle chanson titrée Faure doit partir « Trop c'est trop », il a été interpellé et conduit à son domicile pour une enquête générale où rien n'a été retrouvé. Bientôt trois ans en détention, il n'a toujours pas le droit de recevoir en famille. ",
+        textTwo : "Il faut rappeler qu'ils sont au total, 113 prisonniers détenus politiques qui croupissent dans les pénitenciers du Togo dont 5 ont déjà trouvé la mort.  Le Front Citoyen Togo Debout (FCTD) et Tournons La Page ainsi que les membres des familles des détenus exhortent le gouvernement à leur libération immédiate et sans condition.",
+    },
+    
 ]
