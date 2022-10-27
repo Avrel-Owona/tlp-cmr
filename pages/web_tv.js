@@ -1,23 +1,19 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+import { FaYoutube } from 'react-icons/fa';
 import HeadSeo from '../app/components/HeadSeo';
+import PageHeader from '../app/components/PageHeader';
+import SectionVideos from '../app/components/SectionVideos';
 
 const TlpTv = () => {
     const router = useRouter()
     return (
         <>
             <>
-                <HeadSeo currentURL={router.asPath} description={'Notre web TV'} pageTitle={'Web TV'} previewImage={'/groupe.jpeg'} />
+                <HeadSeo currentURL={router.asPath} description={'Forum de toutes nos vidéos en ligne'} pageTitle={'Web TV'} previewImage={'/groupe.jpeg'} />
             </> 
-            <div className='h-screen w-screen relative'>
-                <div className="h-full w-full justify-center items-center absolute top-0 flex flex-col z-40">
-                    <h3 className='text-white font-bold text-3xl sm:text-6xl text-center font-news uppercase'>Notre Télévision, bientôt <br/>disponible</h3>
-                    {/*<p className='pt-10 w-10/12 lg:w-4/12 text-white text-xl font-light text-center lg:text-left'>Tournons La Page est un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne.</p>*/}
-                </div>
-                <div className='h-full w-full bg-black opacity-50 absolute top-0 border-red-50'></div>
-                <img src="/groupe.jpeg" className='w-full h-full object-cover z-0' alt="groupe"/>
-                {/*<img src="/resis.jpg" className='w-full h-full object-cover z-0' alt=""/>*/}
-            </div>
+            <PageHeader cover={'/2e_assemblee_generale_ordinaire/IMG_2CE9185DEAF3-1.jpeg'} title={`Web TV`} />
+            <SectionVideos/>
         </>
     );
 };
