@@ -14,7 +14,7 @@ const Index = () => {
                 <HeadSeo currentURL={router.asPath} description={'Au coeur des informations pour la democratie du cameroun'} pageTitle={'Actualités'} previewImage={'/groupe.jpeg'} />
             </>
             <div className='w-screen relative bg-no-repeat bg-center'>
-                <PageHeader cover={'/2e_assemblee_generale_ordinaire/IMG_2CE9185DEAF3-1.jpeg'} title={'actualités'}/>
+                <PageHeader cover={'/2e_assemblee_generale_ordinaire/IMG_2CE9185DEAF3-1.jpeg'} title={'Actualités'}/>
                 <SectionCardsNews/>
                 <HeaderAbout />
             </div>
