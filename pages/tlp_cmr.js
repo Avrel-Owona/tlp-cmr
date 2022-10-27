@@ -1,59 +1,66 @@
-import React, {useState} from 'react';
+import React from 'react';
 import RegissorCard from "../app/components/RegissorCard";
-import {ImagesItems} from "../app/utils/ImagesItems";
 import Link from "next/link";
 import PageHeader from '../app/components/PageHeader';
-import Modal from '../app/components/Modal';
 import HeaderAbout from '../app/components/HeaderAbout';
 import HeadSeo from '../app/components/HeadSeo';
-import { useRouter } from 'next/router';
 import { RegissorData } from '../app/utils/regissorData';
-import About from '../app/components/About';
+import { FaBullseye, FaFilePdf, FaUserAlt } from 'react-icons/fa';
+import { MdCampaign } from 'react-icons/md';
+import { useRouter } from 'next/router';
 
 const TlpCmr = () => {
 
-    const [modal, setModal] = useState(false)
-    const [imgSrc, setImgSrc] = useState('')
 
-    const getImg = (img) => { 
-        setModal(true)
-        setImgSrc(img)
-        console.log(modal)
-    }
     const router = useRouter()
-
     return (
         <>
-            <HeadSeo currentURL={router.asPath} pageTitle={'Qui sommes nous ?'} description={'Nous sommes un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne.'} previewImage={'/groupe.jpeg'}/>
-            <PageHeader cover={'/2e_assemblee_generale_ordinaire/IMG_1DE5518126D9-1.jpeg'} title={'TLP CAMEROUN'} />
-            <Modal imgSrc={imgSrc} modal={modal} setModal={setModal}/>
-            <HeaderAbout/>
-            <section className="bg-gray-100 w-full my-10 lg:my-0 pt-16 lg:py-36 flex flex-col items-center">
-              <div className="w-full sm:px-0 lg:w-11/12 xl:w-8/12 flex flex-wrap sm:items-center lg:justify-center">
-                <section className='sm:px-20 lg:px-0 flex flex-col sm:w-10/12 lg:w-6/12 xl:w-3/6'>
-                    <div className="w-full sm:px-0 px-7">
-                        <h3 className='carte-text carte-text-after lg:text-center text-4xl font-bold py-10 lg:py-20 font-news uppercase'>Mouvement tournons la page</h3>
-                        <p className='w-full text-sm text-start lg:text-base text-gray-800 font-extralight'>
-                        Tournons La Page est un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne. Il s’agit d’une alliance non-partisane et pacifique de 200 organisations de défense des droits humains, de mouvements de jeunes, de syndicats, d’associations non confessionnelles, d’intellectuels et d’artistes regroupés en dix coalitions nationales : Burundi, Cameroun, Congo, Côte-d’Ivoire, Gabon, Guinée, Niger, République Démocratique du Congo, Tchad et Togo ainsi qu’une coalition européenne. La coordination internationale de TLP est basée à Paris.
+            <HeadSeo currentURL={router.asPath} pageTitle={'Qui sommes nous ?'} description={'Nous sommes un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne.'} previewImage={'/2e_assemblee_generale_ordinaire/IMG_2CE9185DEAF3-1.jpeg'}/>
+            <PageHeader cover={'/2e_assemblee_generale_ordinaire/IMG_2CE9185DEAF3-1.jpeg'} title={'TOURNONS LA PAGE CAMEROUN'} />
+            <section className="sm:p-20 p-7">
+                <h1 className="text-3xl uppercase font-thin text-orange-500 mb-20 lg:block hidden">Qui sommes nous ?</h1>
+                    <div className='flex lg:bg-default w-full flex-wrap sm:justify-between lg:justify-center items-center lg:py-20'>
+                        <div className='w-full text-left mt-10 lg:mt-0 sm:w-72 lg:w-96 xl:mr-20 flex flex-col justify-center'>
+                            <h3 className='text-sm bg-white lg:p-14 lg:pb-20 text-gray-500  font-thin sm:text-base lg:text-xl'>
+                                <span className="text-orange-500">Tournons La Page Cameroun</span><br/> ( TLP-CMR ) est implanté dans 10 régions, 58 départements, et 361 arrondissements.
+                            </h3>
+                            <Link href="/actualites"><button className="mt-10 border-0.5 lg:border-orange-500 w-max border-gray-500 text-sm lg:bg-white lg:text-orange-500 lg:bg-white-500 lg:text-base flex lg:-mt-10 lg:-ml-12 items-center px-5 py-2 lg:py-6 sm:px-12 sm:py-4 text-gray-500 font-light uppercase ease-in duration-100 hover:text-white hover:bg-orange-500 hover:border-orange-500 button-carte">Devenir membre</button></Link>
+                        </div>
+                        <img src="/afrique-carte.png" className='sm:mt-0 w-full sm:w-3/6 mt-10 lg:w-3/6 xl:w-96 h-full object-cover z-0' alt="carte"/>
+                    </div>
+                </section>
+                <section className='flex flex-wrap sm:px-20 px-7 lg:justify-center xl:justify-between'>
+                    <div className='lg:px-10 lg:mr-3 xl:mx-0 lg:py-20 w-full lg:w-96 card-about lg:border-0.5 lg:shadow-lg sm:mt-3 lg:mt-0'>
+                        <h1 className='text-orange-500 uppercase text-xl lg:text-2xl font-thin flex items-center'>Objectifs<FaBullseye className='ml-3'/></h1>
+                        <ol className='list-disc text-sm lg:text-base font-extralight ml-8 text-gray-600 mt-4'>
+                            <li>Refuser toute manipulation constitutionnelle à des fins personnelles ;</li>
+                            <li>Délégitimer les régimes autoritaires aux yeux de l'opinion publique et des décideurs internationaux;</li>
+                            <li>Mettre fin à l'approbation par les dirigeants occidentaux de pratiques non démocratiques en Afrique;</li>
+                            <li>Assurer la défense de nos membres en danger;</li>
+                            <li>Construire une expertise solide et donner du contenu à l'après-alternance.</li>
+                        </ol>
+                    </div>
+                    <div className='lg:px-10 lg:ml-3 lg:py-20 w-full lg:w-96 card-about lg:border-0.5 lg:shadow-lg mt-12 lg:mt-0'>
+                        <h1 className='text-orange-500 uppercase text-xl lg:text-2xl font-thin flex items-center'>Valeurs<MdCampaign className='ml-3'/></h1>
+                        <p className='list-disc text-sm lg:text-base font-extralight text-gray-600 mt-4'>
+                        Tournons La Page est un mouvement citoyen international qui agit pour la promotion de l’alternance démocratique en Afrique subsaharienne. Il s’agit d’une alliance non-partisane et pacifique de 200 organisations de défense des droits humains, de mouvements de jeunes, de syndicats, d’associations non confessionnelles, d’intellectuels et d’artistes regroupés en dix coalitions nationales : Burundi, Cameroun, Congo, Côte-d’Ivoire, Gabon, Guinée, Niger, République Démocratique du Congo, Tchad et Togo ainsi qu’une coalition européenne. La coordination internationale de TLP est basée à Paris
                         </p>
                     </div>
-                    <div className='w-full justify-start flex'>
-                          <Link href="/actualites"><button className="mt-10 border-0.5 w-max border-gray-800 text-sm lg:text-base flex lg:mt-16 items-center px-5 ml-7 sm:ml-0 py-2 lg:py-4 sm:px-12 sm:py-4 text-gray-500 font-light uppercase ease-in duration-100 hover:text-white hover:bg-orange-500 hover:border-orange-500">Devenir membre</button></Link>
+                    <div className='lg:px-10 lg:ml-3 lg:py-20 w-full lg:w-96 card-about lg:border-0.5 lg:shadow-lg mt-6 xl:mt-0 lg:mt-6'>
+                        <h1 className='text-orange-500 uppercase text-xl lg:text-2xl font-thin flex items-center'>Être membre <FaUserAlt className='ml-3 text-xl'/></h1>
+                        <p className='list-disc text-sm lg:text-base font-extralight text-gray-600 mt-4'>
+                            Pour devenir membre de Tournons La Page, vous devez être une organisation ou un individu, rejoindre l'une des dix (10) coalitions nationales existantes ou en créer une dans votre pays d'appartenance, si aucune coalition n'existe. <br/> 
+                            <a target='_blank' href={''} className='flex items-center text-orange-400 font-thin mt-2 text-sm sm:text-base cursor-pointer hover:text-black'><FaFilePdf className='text-orange-500 mr-3'/>Charte de TLP</a>
+                        </p>
+                        <h1 className='text-orange-500 uppercase text-sm lg:text-base font-thin flex items-center mt-4'>Adhesion :</h1>
+                        <p className='text-sm lg:text-base font-extralight text-gray-600'>L'adhésion au mouvement pour une coalition africaine est de 100€, le paiement se fait en ligne, via Hello Asso</p>
+                        <Link href={''}><button className='px-5 p-2 sm:px-12 sm:py-4 text-sm lg:text-base font-thin mt-10 text-orange-500 border-0.5 border-orange-300 hover:text-white hover:bg-orange-500 duration-100 ease-in'>Plateforme de paiement</button></Link>
+
                     </div>
-                 </section>
-                <img src="/afrique.png" className='w-full  my-20 sm:w-96 xl:w-3/6 h-full object-cover z-0' alt="afrique"/>
-              </div>
-            </section>
-            <section className='sm:px-20 flex flex-col items-center lg:mb-20'>
-              <div className="w-full sm:px-0 px-7 lg:w-6/12">
-                <h3 className='carte-text carte-text-after lg:text-center text-4xl font-bold py-10 lg:py-20 font-news uppercase'>Nos valeurs</h3>
-                <p className='lg:text-center w-full text-sm text-start lg:text-base text-gray-800 font-extralight'>
-                Dédiée à l’alternance démocratique, la coalition TLP-CMR s’appuie sur les valeurs suivantes qui unissent ses membres : Le respect et la défense des droits humains et des libertés fondamentales, des droits économiques, sociaux et culturels et de l’accès aux ressources nationales,le caractère universel de la démocratie et de la défense des grands principes démocratiquesle rôle central des contre-pouvoirs citoyens et des corps intermédiaires dans la vie politique et sociale,l’égalité des indivis en droit et en opportunités,la solidarité nationale et internationale,l’importance des libertés individuelles et civiques,la transparence de l’action publique et la redevabilité des élus envers les citoyens
-                </p>
-              </div>
-            </section>
-            <section className='sm:px-20 pb-20 lg:pb-40 my-10'>
-                <h3 className='carte-text carte-text-after lg:text-center text-4xl font-bold py-10 lg:py-20 font-news uppercase px-7'>Nos regisseurs</h3>
+                </section>
+                <section className='sm:px-20 px-7 pb-20 lg:pb-0 xl:pb-40 mb-10 mt-10 sm:mt-20'>
+                <h1 className="text-3xl uppercase font-thin text-orange-500 mb-20 lg:block hidden lg:mt-24 xl:mt-44">Nos regisseurs</h1>
+                <h1 className='text-orange-500 uppercase text-xl lg:text-2xl mb-2 font-thin flex items-center lg:hidden'>Nos regisseurs :</h1>
                 <div className='flex flex-wrap justify-center'>
                     {
                         RegissorData.map((regissor, index) => {
@@ -64,14 +71,16 @@ const TlpCmr = () => {
                     }
                 </div>
             </section>
-          <section className="w-full my-10 lg:py-0 lg:pb-20 flex flex-col items-center sm:px-20 px-7">
-              <h1 className='font-bold text-3xl sm:text-4xl text-center text-gray-800 carte-text carte-text-after font-news uppercase'>Partenaires internationaux</h1>
-              <div className="flex flex-wrap mt-14 items-center justify-center">
-                  <img src="/Secours-catho-removebg-preview.png" className='sm:mx-8 mt-8 w-52 h-full' alt="partenaire"/>
-                  <img src="/Misereor_Logo.svg-removebg-preview.png" className='sm:mx-8 mt-8 w-52 h-full' alt="partenaire"/>
-                  <img src="/amnesty-logo.png" className='sm:mx-8 mt-8 w-52 h-full' alt="partenaire"/>
-                  <img src="/fld_logo_good-removebg-preview.png" className='sm:mx-8 mt-8 w-52 h-full' alt="partenaire"/>
-                  <img src="/acat-118151-removebg-preview.png" className='sm:mx-8 mt-8 w-52 h-full' alt="partenaire"/>
+            <HeaderAbout/>
+          <section className="w-full my-10 lg:my-0 xl:my-10 lg:py-0 lg:pb-20 flex flex-col lg:px-20 px-7">
+                <h1 className="text-3xl uppercase font-thin text-orange-500 lg:block hidden mt-36 xl:mt-0 xl:mb-0">partenaires internationaux</h1>
+                <h1 className='text-orange-500 uppercase text-xl lg:text-2xl mb-2 font-thin flex items-center lg:hidden'>partenaires internationaux :</h1>
+              <div className="flex flex-wrap xl:mt-14 items-center sm:justify-center">
+                  <img src="/Secours-catho-removebg-preview.png" className='sm:mx-8 mt-8 mr-5 sm:mr-0 w-32 sm:w-52 h-full' alt="partenaire"/>
+                  <img src="/Misereor_Logo.svg-removebg-preview.png" className='sm:mx-8 mt-8 mr-5 sm:mr-0 w-32 sm:w-52 h-full' alt="partenaire"/>
+                  <img src="/amnesty-logo.png" className='sm:mx-8 mt-8 mr-5 sm:mr-0 w-32 sm:w-52 h-full' alt="partenaire"/>
+                  <img src="/fld_logo_good-removebg-preview.png" className='sm:mx-8 mt-8 mr-5 sm:mr-0 w-32 sm:w-52 h-full' alt="partenaire"/>
+                  <img src="/acat-118151-removebg-preview.png" className='sm:mx-8 mt-8 mr-5 sm:mr-0 w-32 sm:w-52 h-full' alt="partenaire"/>
               </div>
           </section>
         </>
