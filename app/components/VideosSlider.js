@@ -78,7 +78,7 @@ const VideosSlider = () => {
                         
                     )
                 })}
-                <Link href="/web_tv"><button className="text-orange-500 lg:hidden border-0.5 w-max mt-10 sm:mt-20 sm:font-light border-orange-500 text-sm sm:text-base flex items-center px-5 py-2 sm:px-12 sm:py-4">Toutes les vidéos <FaYoutube className='pl-3 text-3xl'/></button></Link>
+                <Link href="/web_tv"><button className="text-orange-500 lg:hidden border-0.5 w-max mt-10 sm:mt-20 font-extralight sm:font-light border-orange-400 text-sm sm:text-base flex items-center px-5 py-2 sm:px-12 sm:py-4">Toutes les vidéos <FaYoutube className='pl-3 text-3xl'/></button></Link>
             </Swiper>
         </section>
     )
