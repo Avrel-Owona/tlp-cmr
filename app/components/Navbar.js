@@ -92,17 +92,17 @@ export const Navbar = () => {
                         <div className={`lg:hidden h-screen flex items-center justify-center absolute text-black top-0 w-full ${isOpen ? 'left-0' : 'left-[-100%]'} bg-white ease-in duration-300`}>
                         {isOpen ? 
                             <button
-                                    className='text-gray-500 flex items-center justify-center focus:outline-none focus:ring-offset-2 focus:ring-white text-4xl z-10 absolute top-10 right-10%'
+                                    className='text-gray-700 flex items-center justify-center focus:outline-none focus:ring-offset-2 focus:ring-white text-4xl z-10 absolute top-10 right-10%'
                                     onClick={() => setIsOpen(!isOpen)}
                                     name={'burger'}
                                 >
 
                                     <AiOutlineClose/>
                             </button> : null}
-                            <ul className='px-2 pt-2 pb-3 sm:px-3 text-gray-500 font-thin'>
+                            <ul className='px-2 pt-2 pb-3 sm:px-3 text-gray-700 font-thin'>
                                 {NavItems.map((item, index)=> {
                                     return <ActiveLink key={index} activeClassName="font-light text-orange-600" href={item.path}>
-                                                <li className='cursor-pointer font font-sans py-3 text-sm'>
+                                                <li className='cursor-pointer font font-light py-3 text-base'>
                                                     <a href={item.path}>{item.title}</a>
                                                 </li>
                                             </ActiveLink>
