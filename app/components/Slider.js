@@ -57,7 +57,7 @@ export const Slider = () => {
                                 <img src={slide.imgSrc} className='w-full object-cover h-full' alt="img-slide"/>
                                 <div className="content absolute flex flex-col top-0 h-full w-full justify-center lg:pl-20 xl:pl-48 items-center lg:items-start z-40 sm:px-20 px-7">
                                     <h3 class="text-white w-full lg:w-4/6 xl:w-3/6 font-bold text-5xl lg:text-7xl uppercase text-center lg:text-left font-news mt-14 sm:mt-10 title">{slide.title}</h3>
-                                    <p class="pt-10 w-10/12 sm:w-8/12 lg:w-6/12 xl:w-5/12 text-white text-sm sm:text-base xl:text-xl font-light lg:font-extralight text-center lg:text-left subtitle">{slide.subtitle}</p>
+                                    <p class="pt-10 w-10/12 sm:w-8/12 lg:w-6/12 xl:w-5/12 text-white text-base xl:text-xl font-light lg:font-extralight text-center lg:text-left subtitle">{slide.subtitle}</p>
                                     <Link href='/tlp_cmr'><button name="more" className="px-8 text-sm sm:px-12 py-3 bg-orange-600 mt-10 font-light lg:text-base text-white">En savoir plus</button></Link>
                                 </div>
                             </>
