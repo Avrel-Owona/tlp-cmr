@@ -201,7 +201,7 @@ export const NewsItemsCards = [
 		title: "2e ASSEMBLÉ GÉNÉRALE ORDINAIRE | 2025 - Enjeux et defis citoyens",
 		path: "2e_assemblee_generale_ordinaire",
 		cover: "/2e_assemblee_generale_ordinaire/IMG_622095C45196-1.jpeg",
-		date: "03 Novembre 2022",
+		date: "22 Octobre 2022",
 		// description : "Mesdames et Messieurs, chers camarades défenseurs des droits de l'homme, Conformément aux statuts de notre organisation et en ma qualité de Coordonnateur, la 2 Assemblée Générale Ordinaire de TLP Cameroun est convoquée pour le Samedi22 Octabre 2022 à Yaoundé. Cette irnportante rencontre se tiendra à Yaoundé, au siège du réseau I)ynamique Citoyenne, sis à Anguissa, face lycée, en présentiel et dans le respect des mesures barrières contre la pandémie à Covid-19 Ladite Assemblée Générale Ordinaire a pour objet : le bilan des trois années écoulées, la définition des axes d'intervention de TlP-Cameroun pour le triennat 2422-2425 et ie renouvellement des mandats au sein des instances et organes. Des invitations pawiendront àtous les membres qui seront désignés par leurs pairs pour représenter les différentes régions à ces assises. Dans i'espoir de la participation effective des délégués des differentes régions dans lesquelles la coalition nationale est représentée, veuill ez agréer Mesdames et Messieurs, chers camarades défenseurs des droits de l'homme,, I'expression de ma considération distinguée.",
 		picturesGalery: true,
 		pictures: [
