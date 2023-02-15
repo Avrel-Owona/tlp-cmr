@@ -74,9 +74,38 @@ const ActualitiesSlider = () => {
 				{NewsItemsCards.map((actuality, index) => {
 					return (
 						<div key={index} className="border-0.5 mr-7">
-							<SwiperSlide
-								onClick={() => getActuality(actuality.path, actuality.id)}
-							></SwiperSlide>
+							<SwiperSlide>
+								<img
+									src={actuality.cover}
+									className="h-full w-full object-cover card-news-slide"
+									alt="img-cover"
+								/>
+								<div className="flex items-end bg-card-news absolute top-0 w-full h-full">
+									<div className="flex flex-col justify-between p-8 text-white w-full">
+										<h3 className="bg-orange-500 absolute top-0 right-0 h-9 text-sm flex items-center text-white justify-center font-light px-12 uppercase">
+											{actuality.type}
+										</h3>
+										<>
+											<h3 className="title-card-news font-semibold font-news">
+												{actuality.title}
+											</h3>
+											<div className="flex items-baseline justify-between">
+												<button
+													name="details"
+													onClick={() =>
+														getActuality(actuality.path, actuality.id)
+													}
+													className="flex items-center mt-8 font-extralight cursor-pointer"
+												>
+													Lire{" "}
+													<FiArrowRight className="text-2xl pl-3 text-orange-500" />
+												</button>
+												<span className="date-card-news">{actuality.date}</span>
+											</div>
+										</>
+									</div>
+								</div>
+							</SwiperSlide>
 						</div>
 					)
 				})}
