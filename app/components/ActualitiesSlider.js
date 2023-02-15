@@ -57,7 +57,7 @@ const ActualitiesSlider = () => {
 					},
 					1400: {
 						// width: 768,
-						slidesPerView: 5,
+						slidesPerView: 4,
 					},
 				}}
 				// onSwiper={setSwiperRef}

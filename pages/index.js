@@ -66,7 +66,7 @@ export default function Home() {
 					controls
 				></video>
 				<Link href="/camarades_detenus">
-					<button className="mt-10 sm:mt-16 border-0.5 border-orange-500 bg-orange-500 text-sm flex lg:mt-20 items-center px-5 py-1 sm:px-12 sm:py-4 text-white font-light uppercase sm:ml-0  button-video hover:lg:border-orange-300 hover:lg:text-orange-500 hover:lg:bg-transparent ease-in duration-100">
+					<button className="mt-10 sm:mt-16 border-0.5 text-white border-orange-500 bg-orange-500 text-sm flex lg:mt-20 items-center px-5 py-1 sm:px-12 sm:py-4 hover:text-orange-500 font-light uppercase sm:ml-0  button-video hover:lg:border-orange-300 hover:lg:bg-transparent ease-in duration-100">
 						Camarades déténus <FiArrowRight className="pl-3 text-3xl" />
 					</button>
 				</Link>
